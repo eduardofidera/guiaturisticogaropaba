@@ -10,7 +10,7 @@ gerar markers em localizações de pontos turísticos.
 - buscar dados do banco usando ID de rota e destino.
 
 
-- desenhar modelagem do banco de dadoskk.
+- desenhar modelagem do banco de dados.
 --------- possivel sql ---------
 CREATE DATABASE guiaturisticogrb;
 USE guiaturisticogrb;
