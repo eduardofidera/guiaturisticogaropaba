@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Guia Turístico Garopaba</title>
+		<title>Garopaba Turismo e Transporte</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -112,8 +112,26 @@ var	marker3 = new google.maps.Marker({
     icon:'images/restaurante.png'
   });
   
+  
+  var infowindow = new google.maps.InfoWindow({
+  content:"Título"
+  });
   google.maps.event.addListener(marker,'click',function() {
-  document.getElementById("info").innerHTML = "hello";
+  document.getElementById("title").innerHTML = "hello";
+    document.getElementById("info").innerHTML = "informações sobre o marker";
+  infowindow.open(map,marker);
+  });
+  
+  google.maps.event.addListener(marker2,'click',function() {
+  document.getElementById("title").innerHTML = "marker2";
+    document.getElementById("info").innerHTML = "informações sobre o marker2";
+  infowindow.open(map,marker2);
+  });
+  
+  google.maps.event.addListener(marker3,'click',function() {
+  document.getElementById("title").innerHTML = "marker3";
+  document.getElementById("info").innerHTML = "informações sobre o marker3";
+  infowindow.open(map,marker3);
   });
   }
   
@@ -123,7 +141,10 @@ var	marker3 = new google.maps.Marker({
 					</script>
 				</div>
 			</section>
-			<div id="info" style="padding-top:5px;">
+			<div id="title" style="padding-top:5px; font-size: 1.15em; letter-spacing: 0.025em;color: inherit;font-weight: 300;line-height: 1.75em;margin-bottom: 0.5em;text-transform: uppercase;">
+			</div>
+			
+			<div id="info">
 			</div>
 		</div>
 
