@@ -79,6 +79,11 @@
 			<!-- Main -->
 	<!-- Mapa -->
 		<section class="wrapper style4 container">
+		<div id="view">
+		<?php 
+		include $view;
+		?>
+		</div>
 			<div class="row 150%">
 				<div class="8u 12u(narrower)">
 		<!-- Content -->
