@@ -14,7 +14,7 @@ class MarkerController{
 									$a->longi = $longi;
 												$a->categoria = $categoria;
 																			$a->descricao = $descricao;
-			$t->save();
+			$a->save();
 			header("Location: index.php?c=Marker&p=listar");
 		}
 		$view = 'view/Markers/cadastrar.php';
