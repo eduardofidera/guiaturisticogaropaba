@@ -24,4 +24,4 @@ categorias -\/
 --------------------------------
 auth0
 laravel
-angularJS
+angularJSdasdasd
