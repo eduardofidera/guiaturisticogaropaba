@@ -1,4 +1,4 @@
-Fazer o sistema de guia turístico para garopaba.
+﻿Fazer o sistema de guia turístico para garopaba.
 anotar os itinerários de todos ônibus com destino e origem á Garopaba (e todos seus detalhes).
 anotar basicos pontos turísticos com referência e detalhes de localização.
 traçar no google maps (usando API) as rotas dos onibus.
@@ -10,7 +10,7 @@ gerar markers em localizações de pontos turísticos.
 - buscar dados do banco usando ID de rota e destino.
 
 
-- desenhar modelagem do banco de dados.
+- desenhar modelagem do banco de dadoskk.
 --------- possivel sql ---------
 CREATE DATABASE guiaturisticogrb;
 USE guiaturisticogrb;
