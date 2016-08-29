@@ -1,0 +1,23 @@
+Fazer o sistema de guia turístico para garopaba.
+anotar os itinerários de todos ônibus com destino e origem á Garopaba (e todos seus detalhes).
+anotar basicos pontos turísticos com referência e detalhes de localização.
+traçar no google maps (usando API) as rotas dos onibus.
+gerar markers em localizações de pontos turísticos.
+
+ --  --
+- procurar nos sites de transporte (Paulotur, Santo Anjo e GMídia) os horários e rotas de ônibus.
+- anotar usando o GMaps posições de origem e destino (latitude e longitude), que serão salvos no banco.
+- buscar dados do banco usando ID de rota e destino.
+
+
+- desenhar modelagem do banco de dados.
+--------- possivel sql ---------
+CREATE DATABASE sgtt;
+USE sgtt;
+
+CREATE TABLE rotas (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,nome VARCHAR(50) NOT NULL, origemlat INT NOT NULL, origemlongi INT NOT NULL, destinolat INT NOT NULL, destinolongi INT NOT NULL);
+CREATE TABLE pontos_turisticos(id INT NOT NULL PRIMARY KEY,nome VARCHAR(50) NOT NULL, lat INT NOT NULL, longi INT NOT NULL);
+
+auth0
+laravel
+angularJS
