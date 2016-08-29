@@ -11,16 +11,21 @@ class MarkerController{
 						# o formulario foi enviado
 			$a = new Marker();
 			$a->nome = $nome;
-						$a->lat = $lat;
-									$a->longi = $longi;
-												$a->categoria = $categoria;
-																			$a->descricao = $descricao;
+			$a->lat = $lat;
+			$a->longi = $longi;
+			$a->categoria = $categoria;
+			$a->descricao = $descricao;
 			$a->save();
 			header("Location: index.php?c=Marker&p=listar");
 		}
 		$view = 'view/Marker/cadastrar.php';
 		include 'template/template.php';
+	}
 
+	public function listar(){
+		$markers = Marker::listar();
+		$view = 'view/Marker/listar.php';
+		include 'template/template.php';
 	}
 
 }

@@ -50,7 +50,15 @@ class Marker{
 		}
 	}
 
+	public function listar(){
+		$db = new Db();
+		$rs = $db->query('SELECT * FROM markers');
+		$allmarkers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
+		return $allmarkers;
+	}
 
+
+	}
 }
 ?>
 
