@@ -16,13 +16,12 @@
 				<header id="header" class="alt">
 					<h1 id="logo"><a href="index.php">Guia Turístico <span>Garopaba</span></a></h1>
 					<nav id="nav">
-						<ul>
-							<li class="current"><a href="index.php">Início</a></li>
+						<ul>	
+							<li class="current"><a href="index.php?c=Marker&p=listar#">MAPA</a></li>
 							<li class="submenu">
-								<a href="#">Método</a>
+								<a href="#">Métodos</a>
 								<ul>
 									<li><a href="index.php?c=Marker&p=cadastrar">Cadastrar Marker</a></li>
-									<li><a href="index.php?c=Marker&p=listar">Mapa</a></li>
 								</ul>
 							</li>
 							<li><a href="#" class="button special">Sign Up</a></li>
@@ -44,14 +43,14 @@
 						<h2> Garopaba </h2>
 						</header>
 						<br />
-						<p>A diversidade de pontos <strong>turísticos</strong> e
+						<p>A diversidade de pontos <strong>turísticos</strong>,
 						<br />
-						<strong>gastronômicos</strong> e <strong>hospedagem</strong>
+						<strong>gastronômicos</strong> e <strong>hospedagens</strong>
 						<br />
-						<p>...
+						<p>
 						<footer>
 							<ul class="buttons vertical">
-								<li><a href="#map" class="button fit scrolly">Ver mais</a></li>
+								<li><a href="#map" class="button fit scrolly">VER MAPA</a></li>
 							</ul>
 						</footer>
 

@@ -1,6 +1,19 @@
-ï»¿<section id="map">
+ï»¿<?php
+foreach ($markers as $marker){
+echo $marker->nome;
+echo $marker->lat;
+echo $marker->longi;
+echo '<br>';
+}
+?>
+
+<section id="map">
+
 <div id="map">
+
 <script type="text/javascript">
+
+
 var map;
 function initMap() {
 
@@ -11,10 +24,20 @@ var garopaba = {lat: -28.024537, lng: -48.623806};
     zoom: 13
  });
 
-	marker = new google.maps.Marker({
-    position: {lat: -28.024537, lng: -48.623806},
-    map: map
-});
+		<?php
+			foreach ($markers as $marker) {
+			
+			echo "$marker->nome = new google.maps.Marker({";
+
+    		echo "position: {lat: $marker->lat, lng: $marker->longi},";
+
+    		echo "map: map";
+			
+			echo "});";
+		}
+?>
+
+
 }
 
  </script>
@@ -26,7 +49,7 @@ var garopaba = {lat: -28.024537, lng: -48.623806};
   
   <!-- google.maps.event.addListener(marker,'click',function() {
   document.getElementById("title").innerHTML = "hello";
-    document.getElementById("info").innerHTML = "informações sobre o marker";
+    document.getElementById("info").innerHTML = "informa?es sobre o marker";
   infowindow.open(map,marker);
   }); -->
   
