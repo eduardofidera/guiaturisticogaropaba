@@ -1,13 +1,4 @@
-﻿<?php
-foreach ($markers as $marker){
-echo $marker->nome;
-echo $marker->lat;
-echo $marker->longi;
-echo '<br>';
-}
-?>
-
-<section id="map">
+﻿<section id="map">
 
 <div id="map">
 
@@ -30,7 +21,13 @@ var garopaba = {lat: -28.024537, lng: -48.623806};
 			echo "$marker->nome = new google.maps.Marker({";
 
     		echo "position: {lat: $marker->lat, lng: $marker->longi},";
-
+			if ($marker->categoria == 1) {
+				echo "icon: 'images/pousada.png',";
+			} elseif ($marker->categoria == 2) {
+				echo "icon: 'images/restaurante.png',";
+			} elseif ($marker->categoria == 3) {
+				echo "icon: 'images/praia.png',";
+			}
     		echo "map: map";
 			
 			echo "});";
