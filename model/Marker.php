@@ -57,8 +57,7 @@ class Marker{
 		return $allmarkers;
 	}
 
-
 	}
-}
+
 ?>
 

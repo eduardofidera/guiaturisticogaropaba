@@ -58,9 +58,6 @@
 					-->
 					<div class="inner">
 
-						<header>
-							<h2>Garopaba</h2>
-						</header>
 						<p>A diversidade de pontos <strong>turísticos</strong> e
 						<br />
 						<strong>gastronômicos</strong> e <strong>hospedagem</strong>
@@ -79,73 +76,13 @@
 			<!-- Main -->
 	<!-- Mapa -->
 		<section class="wrapper style4 container">
-		<div id="view">
-		<?php 
-		include $view;
-		?>
-		</div>
 			<div class="row 150%">
 				<div class="8u 12u(narrower)">
 		<!-- Content -->
 		<div class="content">
-			<section>
-				<div id="map" style="height:500px; width:100%; position:relative;">
-					<script type="text/javascript">
-					
-var map;
-function initMap() {
-var garopaba = {lat: -28.024537, lng: -48.623806};
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: garopaba,
-    zoom: 13
-  });
-
-
-var marker = new google.maps.Marker({
-    position: {lat: -28.034537, lng: -48.623806},
-	icon:'images/pousada.png',
-    map: map
-  });
-var marker2 = new google.maps.Marker({
-    position: garopaba,
-    map: map,
-    icon:'images/praia.png'
-  });
-var	marker3 = new google.maps.Marker({
-    position: {lat: -28.014537, lng: -48.623806},
-    map: map,
-    icon:'images/restaurante.png'
-  });
-  
-  
-  var infowindow = new google.maps.InfoWindow({
-  content:"Título"
-  });
-  google.maps.event.addListener(marker,'click',function() {
-  document.getElementById("title").innerHTML = "hello";
-    document.getElementById("info").innerHTML = "informações sobre o marker";
-  infowindow.open(map,marker);
-  });
-  
-  google.maps.event.addListener(marker2,'click',function() {
-  document.getElementById("title").innerHTML = "marker2";
-    document.getElementById("info").innerHTML = "informações sobre o marker2";
-  infowindow.open(map,marker2);
-  });
-  
-  google.maps.event.addListener(marker3,'click',function() {
-  document.getElementById("title").innerHTML = "marker3";
-  document.getElementById("info").innerHTML = "informações sobre o marker3";
-  infowindow.open(map,marker3);
-  });
-  }
-  
-
-					</script>
-					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPH9u0Vnivgf75V_IhVAeFtF11_t77Smw&callback=initMap">
-					</script>
-				</div>
-			</section>
+			<?php 
+		include $view;
+		?>
 			<div id="title" style="padding-top:5px; font-size: 1.15em; letter-spacing: 0.025em;color: inherit;font-weight: 300;line-height: 1.75em;margin-bottom: 0.5em;text-transform: uppercase;">
 			</div>
 			

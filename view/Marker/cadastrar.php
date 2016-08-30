@@ -21,7 +21,7 @@
 		</div>
 		
 		<div class="field">
-		<label for="descricao">Descri��o</label>
+		<label for="descricao">Descrição</label>
 		<input type="text" name="descricao" id="descricao" required>
 		</div>
 		
