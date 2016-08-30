@@ -29,3 +29,6 @@
 		<li><input type="submit" value="Cadastrar" /></li>
 		</ul>
 </form>
+</div>
+
+	</div>

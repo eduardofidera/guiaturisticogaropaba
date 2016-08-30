@@ -5,7 +5,7 @@ class MarkerController{
 		$lat = filter_input(INPUT_POST, 'lat');
 		$longi = filter_input(INPUT_POST, 'longi');
 		$categoria = filter_input(INPUT_POST, 'categoria');
-		$descricao = filter_input(INPUT_POST, 'categoria');
+		$descricao = filter_input(INPUT_POST, 'descricao');
 		
 		if ($nome){
 						# o formulario foi enviado

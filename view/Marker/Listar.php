@@ -1,26 +1,6 @@
-<section>
-<?php
-foreach($markers as $marker){
-	 echo $marker->nome;
-	 echo $marker->lat;
-	 		echo '<br>';
-	for ($i=0;$i<6;$i++){
-	 	for ($o=0; $o<6;$o++){
-	 		echo '<script>';
-	 		echo 'var markers['.$i.']['.$o.']= $marker->id';
-	 		echo 'var markers['.$i.']['.$o.']= $marker->nome';
-	 		echo 'var markers['.$i.']['.$o.']= $marker->lat';
-	 		echo 'var markers['.$i.']['.$o.']= $marker->longi';
-	 		echo 'var markers['.$i.']['.$o.']= $marker->categoria';
-	 		echo 'var markers['.$i.']['.$o.']= $marker->descricao';
-	 		echo '</script>';
-		}
-	}
-}
-?>
-<div id="map" style="height:500px; width:100%; position:relative;">
+﻿<section id="map">
+<div id="map">
 <script type="text/javascript">
-alert(markers[1][2]);
 var map;
 function initMap() {
 
@@ -31,14 +11,10 @@ var garopaba = {lat: -28.024537, lng: -48.623806};
     zoom: 13
  });
 
-	markersnome = new google.maps.Marker({
+	marker = new google.maps.Marker({
     position: {lat: -28.024537, lng: -48.623806},
     map: map
 });
-    markersilveira = new google.maps.Marker({
-    	position: {lat:markers[1][2], lng:markers[1][3]};
-    	map:map
-  });
 }
 
  </script>
@@ -57,5 +33,39 @@ var garopaba = {lat: -28.024537, lng: -48.623806};
 					
 					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPH9u0Vnivgf75V_IhVAeFtF11_t77Smw&callback=initMap">
 					</script>
+					
+					
 				</div>
+				
 			</section>
+			
+			</div>
+
+	</div>
+	
+								<div class="4u 12u(narrower)">
+
+									<!-- Opções -->
+										<div class="sidebar">
+											<section>
+												<header>
+													<h3>O que você procura?</h3>
+												</header>
+												<footer>
+													<ul class="buttons">
+														<li><a href="#" class="button small">Pousadas</a></li>
+													</ul>
+													<ul class="buttons">
+														<li><a href="#" class="button small">Hotéis</a></li>
+													</ul>
+													<ul class="buttons">
+														<li><a href="#" class="button small">Praias</a></li>
+													</ul>
+													<ul class="buttons">
+														<li><a href="#" class="button small">Restaurantes</a></li>
+													</ul>
+												</footer>
+											</section>
+										</div>
+
+				</div>

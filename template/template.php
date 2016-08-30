@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Garopaba Turismo e Transporte</title>
@@ -19,27 +14,15 @@
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html">Guia Turístico <span>Garopaba</span></a></h1>
+					<h1 id="logo"><a href="index.php">Guia Turístico <span>Garopaba</span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Início</a></li>
+							<li class="current"><a href="index.php">Início</a></li>
 							<li class="submenu">
-								<a href="#">Layouts</a>
+								<a href="#">Método</a>
 								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li class="submenu">
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Dolore Sed</a></li>
-											<li><a href="#">Consequat</a></li>
-											<li><a href="#">Lorem Magna</a></li>
-											<li><a href="#">Sed Magna</a></li>
-											<li><a href="#">Ipsum Nisl</a></li>
-										</ul>
-									</li>
+									<li><a href="index.php?c=Marker&p=cadastrar">Cadastrar Marker</a></li>
+									<li><a href="index.php?c=Marker&p=listar">Mapa</a></li>
 								</ul>
 							</li>
 							<li><a href="#" class="button special">Sign Up</a></li>
@@ -57,15 +40,18 @@
 						appropriate (<br />).
 					-->
 					<div class="inner">
-
+						<header>
+						<h2> Garopaba </h2>
+						</header>
+						<br />
 						<p>A diversidade de pontos <strong>turísticos</strong> e
 						<br />
 						<strong>gastronômicos</strong> e <strong>hospedagem</strong>
 						<br />
-						<p>para melhorar a sua viagem.
+						<p>...
 						<footer>
 							<ul class="buttons vertical">
-								<li><a href="#main" class="button fit scrolly">Ver mais</a></li>
+								<li><a href="#map" class="button fit scrolly">Ver mais</a></li>
 							</ul>
 						</footer>
 
@@ -83,40 +69,9 @@
 			<?php 
 		include $view;
 		?>
-			<div id="title" style="padding-top:5px; font-size: 1.15em; letter-spacing: 0.025em;color: inherit;font-weight: 300;line-height: 1.75em;margin-bottom: 0.5em;text-transform: uppercase;">
-			</div>
-			
-			<div id="info">
-			</div>
-		</div>
 
-	</div>
-								<div class="4u 12u(narrower)">
-
-									<!-- Opções -->
-										<div class="sidebar">
-											<section>
-												<header>
-													<h3>O que você procura?</h3>
-												</header>
-												<footer>
-													<ul class="buttons">
-														<li><a href="#" class="button small">Pousadas</a></li>
-													</ul>
-													<ul class="buttons">
-														<li><a href="#" class="button small">Hotéis</a></li>
-													</ul>
-													<ul class="buttons">
-														<li><a href="#" class="button small">Praias</a></li>
-													</ul>
-													<ul class="buttons">
-														<li><a href="#" class="button small">Restaurantes</a></li>
-													</ul>
-												</footer>
-											</section>
-										</div>
-
-				</div>
+		
+								
 			</div>
 		</section>
 				
@@ -134,7 +89,7 @@
 					</ul>
 
 					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Untitled</li><li>Design: <a href="#map">Me</a></li>
 					</ul>
 
 				</footer>

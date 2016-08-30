@@ -14,7 +14,7 @@ if(!$controller){
 	# página inicial do site	
 	require 'controller/MarkerController.php';
 	$dc = new MarkerController();
-	$dc->cadastrar();
+	$dc->listar();
 }
 else{
 	$controller .= 'Controller';
