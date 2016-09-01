@@ -57,14 +57,21 @@ class Marker{
 		return $allmarkers;
 	}
 
-	}
+	
 
 	public function getImg(){
 		$db = new Db();
 		$rs = $db->query('SELECT * FROM markerimg WHERE idMarker ='.$this->id);
 		$img = $rs->fetchAll(PDO::FETCH_OBJ);
 		return $img;
-
 	}
+
+/*	public function addImg(){
+		$db = new Db();
+		$local = filter_input($_POST,'local');
+		$img = WideImage::load('');
+		$sql = 'INSERT INTO markerImg()'
+	}*/
+}
 ?>
 

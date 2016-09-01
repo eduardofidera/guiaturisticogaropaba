@@ -21,7 +21,10 @@ CREATE TABLE markers(id INT NOT NULL PRIMARY KEY,nome VARCHAR(50) NOT NULL, lat 
 
 
 categorias -\/
+1 - Pousadas
+2 - Praias
+3 - Restaurantes
 --------------------------------
 auth0
 laravel
-angularJSdasdasd
+angularJS

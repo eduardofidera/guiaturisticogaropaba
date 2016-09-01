@@ -30,7 +30,7 @@ class MarkerController{
 
 		public function img(){
 		$imgproperties = Marker::getImg();
-		include 'template/template.php';
+
 	}
 }
 ?>
