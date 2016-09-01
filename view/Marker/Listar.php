@@ -15,7 +15,22 @@ var garopaba = {lat: -28.024537, lng: -48.623806};
     center: garopaba,
     zoom: 13
  });
-
+ 
+ // Método marker you are here
+	function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } 
+}
+	function showPosition(position) {
+    markerPosition = new google.maps.Marker ({
+		position: {lat: position.coords.latitude, lng: position.coords.longitude},
+		icon: 'images/posicao.png',
+		map: map
+	})
+}
+	getLocation();
+	
 		<?php
 			foreach ($markers as $marker) {
 			// Instanciar o marker
@@ -40,11 +55,25 @@ var garopaba = {lat: -28.024537, lng: -48.623806};
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
 			echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
 			echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
-			
 			echo "});";
 		}
 ?>
-
+	/* google.maps.event.addListener(this.marker,'click',function() {
+		echo "var myTrip = [markerPosition, markers[$marker->id]];"
+		echo "var flightPath = new google.maps.Polyline({"
+		echo "path:myTrip,"
+		echo "strokeColor:"#0000FF","
+		echo "strokeOpacity:0.8,"
+		echo "strokeWeight:2"
+		echo "});"
+	}); */
+	
+	
+	
+	
+	
+	
+	
 }
 
 					</script>
