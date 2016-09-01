@@ -28,5 +28,9 @@ class MarkerController{
 		include 'template/template.php';
 	}
 
+		public function img(){
+		$imgproperties = Marker::getImg();
+		include 'template/template.php';
+	}
 }
 ?>

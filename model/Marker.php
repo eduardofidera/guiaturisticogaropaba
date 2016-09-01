@@ -59,5 +59,12 @@ class Marker{
 
 	}
 
+	public function getImg(){
+		$db = new Db();
+		$rs = $db->query('SELECT * FROM markerimg WHERE idMarker ='.$this->id);
+		$img = $rs->fetchAll(PDO::FETCH_OBJ);
+		return $img;
+
+	}
 ?>
 
