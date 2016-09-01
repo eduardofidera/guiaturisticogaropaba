@@ -2094,13 +2094,14 @@
 			padding: 0.5em 0;
 		}
 
-		
+		/* edited */
 		/* map */
 		#map  {
 		width: 100%;
 		height: 400px;
 		position: relative;
 		}
+		
 		
 /* Wrapper */
 

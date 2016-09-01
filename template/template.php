@@ -43,14 +43,15 @@
 						<h2> Garopaba </h2>
 						</header>
 						<br />
+						<br />
 						<p>A diversidade de pontos <strong>turísticos</strong>,
 						<br />
 						<strong>gastronômicos</strong> e <strong>hospedagens</strong>
 						<br />
-						<p>
+						<br />
 						<footer>
 							<ul class="buttons vertical">
-								<li><a href="#map" class="button fit scrolly">VER MAPA</a></li>
+								<li><a href="http://localhost/pages/guiaturisticogaropaba/index.php?c=Marker&p=listar#map" class="button fit scrolly">VER MAPA</a></li>
 							</ul>
 						</footer>
 
@@ -58,22 +59,12 @@
 
 				</section>
 
-			<!-- Main -->
-	<!-- Mapa -->
-		<section class="wrapper style4 container">
-			<div class="row 150%">
-				<div class="8u 12u(narrower)">
-		<!-- Content -->
-		<div class="content">
+				<article id="main">
+		<!-- view -->
 			<?php 
 		include $view;
 		?>
-
-		
-								
-			</div>
-		</section>
-				
+				</article>
 			<!-- Footer -->
 				<footer id="footer">
 				
