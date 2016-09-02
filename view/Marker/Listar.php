@@ -55,23 +55,17 @@ var garopaba = {lat: -28.024537, lng: -48.623806};
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
 			echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
 			echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
+			foreach ($imagens as $imagem) {
+				if ($imagem->idMarker == $marker->id){
+					echo ",document.getElementById('imagem').innerHTML = '<img src=$imagem->local>'";
+				} else {
+					echo ",document.getElementById('imagem').innerHTML = 'Sem Imagem'";
+				}
+			}
 			echo "});";
+			
 		}
 ?>
-	/* google.maps.event.addListener(this.marker,'click',function() {
-		echo "var myTrip = [markerPosition, markers[$marker->id]];"
-		echo "var flightPath = new google.maps.Polyline({"
-		echo "path:myTrip,"
-		echo "strokeColor:"#0000FF","
-		echo "strokeOpacity:0.8,"
-		echo "strokeWeight:2"
-		echo "});"
-	}); */
-	
-	
-	
-	
-	
 	
 	
 }
@@ -129,6 +123,11 @@ var garopaba = {lat: -28.024537, lng: -48.623806};
 		<div id="descricao">
 		
 		</div>
+		<div id="imagem">
+		<p>This is a paragraph.</p>
+		<button id="btn1">Append text</button>
+		</div>
+		
 	</section>
 	
 		</div>

@@ -2,6 +2,7 @@
 
 require 'lib/Db.php';
 require 'model/Marker.php';
+require 'model/MarkerImg.php';
 // require 'model/Rotas.php';
 
 #controller de inicio
