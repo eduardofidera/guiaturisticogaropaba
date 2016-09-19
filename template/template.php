@@ -62,7 +62,7 @@
 						<br />
 						<footer>
 							<ul class="buttons vertical">
-								<li><a href="http://localhost/pages/guiaturisticogaropaba/index.php?c=Marker&p=listar#map" class="button fit scrolly">VER MAPA</a></li>
+								<li><a href="index.php?c=Marker&p=listar#map" class="button fit scrolly">VER MAPA</a></li>
 							</ul>
 						</footer>
 

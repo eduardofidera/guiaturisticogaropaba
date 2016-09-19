@@ -26,24 +26,18 @@ function initMap() {
 	});
  
 	// Método marker you are here
-	function getLocation() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(showPosition);
-		} 
-
-		markerPosition = new google.maps.Marker ({
-			position: {lat: position.coords.latitude, lng: position.coords.longitude},
-			icon: 'images/posicao.png',
-			map: map
-		})
-	}
-	/*function showPosition(position) {
-		markerPosition = new google.maps.Marker ({
-			position: {lat: position.coords.latitude, lng: position.coords.longitude},
-			icon: 'images/posicao.png',
-			map: map
-		})
-	}*/
+		function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } 
+}
+	function showPosition(position) {
+    markerPosition = new google.maps.Marker ({
+		position: {lat: position.coords.latitude, lng: position.coords.longitude},
+		icon: 'images/posicao.png',
+		map: map
+	})
+}
 	getLocation();
 
 	// Valor do click no input do form e marker no mapa
