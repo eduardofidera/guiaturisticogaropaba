@@ -32,8 +32,11 @@ map = new google.maps.Map(document.getElementById('map'), {
 }
 	getLocation();
 	
-		<?php
+}
 
+// Método do mapa com todos os markers
+function maptudo () {
+	<?php
 			echo "var markers = new Array();";
 			foreach ($markers as $marker) {
 			
@@ -71,7 +74,132 @@ map = new google.maps.Map(document.getElementById('map'), {
 		}
 	
 ?>
+}
 
+// Método do mapa com markers na categoria 1
+function map1 () {
+	<?php
+			echo "var markers = new Array();";
+			foreach ($markers as $marker) {
+			if ($marker->categoria == 1) {
+			// Instanciar usando o id
+			echo "markers[$marker->id] = new google.maps.Marker({";
+			
+    		echo "position: {lat: $marker->lat, lng: $marker->longi},";
+			// Ícone de acordo com a categoria
+			if ($marker->categoria == 1) {
+				echo "icon: 'images/pousada.png',";
+			} elseif ($marker->categoria == 2) {
+				echo "icon: 'images/restaurante.png',";
+			} elseif ($marker->categoria == 3) {
+				echo "icon: 'images/praia.png',";
+			}
+    		echo "map: map";
+			
+			echo "});";
+			
+				
+					
+			// Quando clicar no marker
+			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
+				// Nome
+				echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
+				
+				// Directions
+				echo "document.getElementById('direction').innerHTML = '<a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',";
+				
+				// Descrição
+				echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
+				
+			echo "});";
+			}
+		}
+	
+?>
+}
+
+// Método do mapa com markers na categoria 1
+function map2 () {
+	<?php
+			echo "var markers = new Array();";
+			foreach ($markers as $marker) {
+			if ($marker->categoria == 2) {
+			// Instanciar usando o id
+			echo "markers[$marker->id] = new google.maps.Marker({";
+			
+    		echo "position: {lat: $marker->lat, lng: $marker->longi},";
+			// Ícone de acordo com a categoria
+			if ($marker->categoria == 1) {
+				echo "icon: 'images/pousada.png',";
+			} elseif ($marker->categoria == 2) {
+				echo "icon: 'images/restaurante.png',";
+			} elseif ($marker->categoria == 3) {
+				echo "icon: 'images/praia.png',";
+			}
+    		echo "map: map";
+			
+			echo "});";
+			
+				
+					
+			// Quando clicar no marker
+			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
+				// Nome
+				echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
+				
+				// Directions
+				echo "document.getElementById('direction').innerHTML = '<a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',";
+				
+				// Descrição
+				echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
+				
+			echo "});";
+			}
+		}
+	
+?>
+}
+
+// Método do mapa com markers na categoria 3
+function map3 () {
+	<?php
+			echo "var markers = new Array();";
+			foreach ($markers as $marker) {
+			if ($marker->categoria == 3) {
+			// Instanciar usando o id
+			echo "markers[$marker->id] = new google.maps.Marker({";
+			
+    		echo "position: {lat: $marker->lat, lng: $marker->longi},";
+			// Ícone de acordo com a categoria
+			if ($marker->categoria == 1) {
+				echo "icon: 'images/pousada.png',";
+			} elseif ($marker->categoria == 2) {
+				echo "icon: 'images/restaurante.png',";
+			} elseif ($marker->categoria == 3) {
+				echo "icon: 'images/praia.png',";
+			}
+    		echo "map: map";
+			
+			echo "});";
+			
+				
+					
+			// Quando clicar no marker
+			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
+				// Nome
+				echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
+				
+				// Directions
+				echo "document.getElementById('direction').innerHTML = '<a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',";
+				
+				// Descrição
+				echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
+				
+			echo "});";
+			}
+		}
+	
+?>
 }
 	
 					</script>
@@ -92,17 +220,16 @@ map = new google.maps.Map(document.getElementById('map'), {
 							</header>
 							<footer>
 								<ul class="buttons">
-								<a href="index.php?c=Marker&p=listar" class="button small">mostrar tudo</a>
+									<li><button onclick="initMap(), maptudo()" class="button small"><h1>Mostrar tudo</h1></button>
 								</ul>
 								<ul class="buttons">
-									<li><a href="index.php?c=Marker&p=listar&categoria=1" class="button small">Pousadas/Hotéis</a></li>
+									<li><button onclick="initMap(), map1()" class="button small"><h1>Pousadas e hotéis</h1></button>
 								</ul>	
 								<ul class="buttons">
-									<li><a href="index.php?c=Marker&p=listar&categoria=2" class="button small">Comida</a></li>
+									<li><button onclick="initMap(), map2()" class="button small"><h1>Comida</h1></button>
 								</ul>
 								<ul class="buttons">
-									<li><a href="index.php?c=Marker&p=listar&categoria=3" class="button small">Praias e <br />
-									Pontos Turísticos</a></li>
+									<li><button onclick="initMap(), map3()" class="button small"><h1>Praias e <br /> pontos turísticos</h1></button>
 								</ul>				
 							</footer>
 						</section>
