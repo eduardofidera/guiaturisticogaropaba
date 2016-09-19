@@ -54,38 +54,23 @@ map = new google.maps.Map(document.getElementById('map'), {
 			echo "});";
 			
 				
-			// Request de rota
-			echo "var request = {
-				origin: '{lat: $marker->lat, lng: $marker->longi}', 
-					destination: 'Garopaba',
-					travelMode: google.maps.DirectionsTravelMode.DRIVING
-					};";
 					
 			// Quando clicar no marker
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
 				// Nome
 				echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
 				
+				// Directions
+				echo "document.getElementById('direction').innerHTML = '<a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',";
+				
 				// Descrição
 				echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
 				
-				
-
 			echo "});";
 			
 		}
 	
 ?>
-
-
-				/*directionsService.route(request, function(response, status) {
-				if (status == google.maps.DirectionsStatus.OK) {
-				directionsDisplay.setDirections(response);
-				}
-				}); */
-
-
-
 
 }
 	
@@ -137,6 +122,10 @@ map = new google.maps.Map(document.getElementById('map'), {
 		</header>
 		
 		<div id="descricao">
+		
+		</div>
+		
+		<div id="direction">
 		
 		</div>
 		<div id="imagem">
