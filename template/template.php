@@ -36,19 +36,9 @@
 						</ul>
 					</nav>
 				</header>
-						<!-- view -->
-							<?php 
-		include $view;
-		?>
+						
 			<!-- Banner -->
-				<section id="banner">
-
-					<!--
-						".inner" is set up as an inline-block so it automatically expands
-						in both directions to fit whatever's inside it. This means it won't
-						automatically wrap lines, so be sure to use line breaks where
-						appropriate (<br />).
-					-->
+				 <section id="banner">				
 					<div class="inner">
 						<header>
 						<h2> Garopaba </h2>
@@ -68,10 +58,13 @@
 
 					</div>
 
-				</section>
+				</section> 
 
 				<article id="main">
-
+<!-- view -->
+							<?php 
+		include $view;
+		?>
 				</article>
 				<!-- Menu AngularJS -->
 				<!-- <div ng-app="myApp"	ng-controller="menuCtrl"> -->

@@ -8,9 +8,18 @@
 					<input type="text" name="nome" id="nome" required>
 				</div>
 
-				<label for="lat">Posição no mapa</label>
-				<input type="hidden" name="lat" id="lat" value="">
-				<input type="hidden" name="longi" id="longi" value="">
+				
+				<div class="field">
+				<label>Latitude: </label>
+					<input type="text" name="lat" id="lat" value="">
+				</div>
+				
+				<div class="field">
+				<label>Longitude: </label>
+					<input type="text" name="longi" id="longi" value="">
+				</div>
+				
+				
 				<div id="map">
 
 					<script type="text/javascript">
@@ -29,29 +38,33 @@ function initMap() {
 		function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-    } 
-}
+		} 
+	}
 	function showPosition(position) {
     markerPosition = new google.maps.Marker ({
 		position: {lat: position.coords.latitude, lng: position.coords.longitude},
 		icon: 'images/posicao.png',
 		map: map
-	})
-}
+		})
+	}
 	getLocation();
-
-	// Valor do click no input do form e marker no mapa
-	google.maps.event.addListener(map, 'click', function(event) {
-
-	document.cadastro.lat.value = event.latLng.lat();
-	document.cadastro.longi.value = event.latLng.lng();
-
+	
+	
+	// Criar o marker
 		markercadastro = new google.maps.Marker({
-			position: {lat: event.latLng.lat(), lng: event.latLng.lng()},
+			position: garopaba,
+			icon: 'images/markercadastro.png',
+			draggable: true,
 			map: map
-
 		});
+		
+	// Quando terminar de arrastar o marker
+	google.maps.event.addListener(markercadastro, 'dragend', function(evt){	
+			// Mudança no value do input
+			document.getElementById('lat').value = evt.latLng.lat();
+			document.getElementById('longi').value = evt.latLng.lng();
 	});
+		
 
 }
 
@@ -60,6 +73,7 @@ function initMap() {
 					
 					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPH9u0Vnivgf75V_IhVAeFtF11_t77Smw&callback=initMap">
 					</script>
+					
 				</div>	
 		
 				<div class="field">
