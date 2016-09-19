@@ -52,18 +52,19 @@ class Marker{
 
 	public function listar(){
 		$db = new Db();
-		$rs = $db->query('SELECT * FROM markers');
-		$allmarkers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
-		return $allmarkers;
-	}
-
-	public function listaCategoria(){
-		$db = new Db();
+		$categoria = filter_input(INPUT_GET, 'categoria');
+		if ($categoria){
 		$categoria = filter_input(INPUT_GET, 'categoria');
 		$rs = $db->query ('SELECT * FROM markers WHERE categoria = '.$categoria);
 		$markers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
 		return $markers;
+	} else {
+		$rs = $db->query('SELECT * FROM markers');
+		$markers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
+		return $markers;
 	}
+	}
+
 
 	
 

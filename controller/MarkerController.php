@@ -28,12 +28,6 @@ class MarkerController{
 		include 'template/template.php';
 	}
 
-		public function listarCategoria(){
-		$markers_categoria = Marker::listaCategoria();
-		$view = 'view/Marker/listarCategoria.php';
-		include 'template/template.php';
-	}
-
 		public function img(){
 		$imgproperties = Marker::getImg();
 		$view = 'view/Marker/listar.php';

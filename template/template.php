@@ -36,6 +36,7 @@
 						</ul>
 					</nav>
 				</header>
+						<!-- view -->
 							<?php 
 		include $view;
 		?>
@@ -70,10 +71,7 @@
 				</section>
 
 				<article id="main">
-		<!-- view -->
-			<?php 
-		include $view;
-		?>
+
 				</article>
 				<!-- Menu AngularJS -->
 				<!-- <div ng-app="myApp"	ng-controller="menuCtrl"> -->

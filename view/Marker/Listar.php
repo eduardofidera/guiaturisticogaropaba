@@ -110,13 +110,13 @@ map = new google.maps.Map(document.getElementById('map'), {
 								<a href="index.php?c=Marker&p=listar" class="button small">mostrar tudo</a>
 								</ul>
 								<ul class="buttons">
-									<li><a href="index.php?c=Marker&p=listarCategoria&categoria=1" class="button small">Pousadas/Hotéis</a></li>
+									<li><a href="index.php?c=Marker&p=listar&categoria=1" class="button small">Pousadas/Hotéis</a></li>
 								</ul>	
 								<ul class="buttons">
-									<li><a href="index.php?c=Marker&p=listarCategoria&categoria=2" class="button small">Comida</a></li>
+									<li><a href="index.php?c=Marker&p=listar&categoria=2" class="button small">Comida</a></li>
 								</ul>
 								<ul class="buttons">
-									<li><a href="index.php?c=Marker&p=listarCategoria&categoria=2" class="button small">Praias e <br />
+									<li><a href="index.php?c=Marker&p=listar&categoria=3" class="button small">Praias e <br />
 									Pontos Turísticos</a></li>
 								</ul>				
 							</footer>
