@@ -27,7 +27,10 @@ categorias -\/
 2 - Praias
 3 - Restaurantes
 --------------------------------
+estudos -
 auth0
-laravel
-angularJS
-
+laravel-
+framework 
+angularJS-
+model,controller
+Single Page Applications(SPAs)

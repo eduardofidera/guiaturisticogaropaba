@@ -24,8 +24,13 @@ class MarkerController{
 
 	public function listar(){
 		$markers = Marker::listar();
-		$imagens = MarkerImg::listar();
 		$view = 'view/Marker/listar.php';
+		include 'template/template.php';
+	}
+
+		public function listarCategoria(){
+		$markers_categoria = Marker::listaCategoria();
+		$view = 'view/Marker/listarCategoria.php';
 		include 'template/template.php';
 	}
 

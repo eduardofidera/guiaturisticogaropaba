@@ -10,7 +10,10 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!-- Important Owl stylesheet -->
 		<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
- 
+
+		<!-- chamando o AngularJS-->
+ 		<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
+
 		<!-- Default Theme -->
 		<link rel="stylesheet" href="owl-carousel/owl.theme.css">
 	</head>
@@ -22,7 +25,7 @@
 					<h1 id="logo"><a href="index.php">Guia Turístico <span>Garopaba</span></a></h1>
 					<nav id="nav">
 						<ul>	
-							<li class="current"><a href="index.php?c=Marker&p=listar#">MAPA</a></li>
+							<li class="current"><a href="index.php?c=Marker&p=listar">MAPA</a></li>
 							<li class="submenu">
 								<a href="#">Métodos</a>
 								<ul>
@@ -33,7 +36,9 @@
 						</ul>
 					</nav>
 				</header>
-
+							<?php 
+		include $view;
+		?>
 			<!-- Banner -->
 				<section id="banner">
 
@@ -70,6 +75,9 @@
 		include $view;
 		?>
 				</article>
+				<!-- Menu AngularJS -->
+				<!-- <div ng-app="myApp"	ng-controller="menuCtrl"> -->
+				
 			<!-- Footer -->
 				<footer id="footer">
 				
@@ -88,6 +96,8 @@
 					</ul>
 
 				</footer>
+
+
 		</div>
 
 		<!-- Scripts -->

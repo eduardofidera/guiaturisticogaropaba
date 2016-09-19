@@ -30,24 +30,32 @@ function initMap() {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(showPosition);
 		} 
-	}
-	function showPosition(position) {
+
 		markerPosition = new google.maps.Marker ({
 			position: {lat: position.coords.latitude, lng: position.coords.longitude},
 			icon: 'images/posicao.png',
 			map: map
 		})
 	}
+	/*function showPosition(position) {
+		markerPosition = new google.maps.Marker ({
+			position: {lat: position.coords.latitude, lng: position.coords.longitude},
+			icon: 'images/posicao.png',
+			map: map
+		})
+	}*/
 	getLocation();
 
 	// Valor do click no input do form e marker no mapa
 	google.maps.event.addListener(map, 'click', function(event) {
+
 	document.cadastro.lat.value = event.latLng.lat();
 	document.cadastro.longi.value = event.latLng.lng();
+
 		markercadastro = new google.maps.Marker({
 			position: {lat: event.latLng.lat(), lng: event.latLng.lng()},
 			map: map
-	
+
 		});
 	});
 

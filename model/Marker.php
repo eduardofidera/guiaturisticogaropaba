@@ -57,6 +57,14 @@ class Marker{
 		return $allmarkers;
 	}
 
+	public function listaCategoria(){
+		$db = new Db();
+		$categoria = filter_input(INPUT_GET, 'categoria');
+		$rs = $db->query ('SELECT * FROM markers WHERE categoria = '.$categoria);
+		$markers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
+		return $markers;
+	}
+
 	
 
 

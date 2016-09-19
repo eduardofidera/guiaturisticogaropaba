@@ -35,7 +35,7 @@ map = new google.maps.Map(document.getElementById('map'), {
 		<?php
 
 			echo "var markers = new Array();";
-			foreach ($markers as $marker) {
+			foreach ($markers_categoria as $marker) {
 			
 			// Instanciar usando o id
 			echo "markers[$marker->id] = new google.maps.Marker({";
@@ -96,8 +96,7 @@ map = new google.maps.Map(document.getElementById('map'), {
 				</div>	
 			</section>
 		</div>
-
-		<div class="4u 12u(narrower)">
+			<div class="4u 12u(narrower)">
 
 					<!-- Opções -->
 					<div class="sidebar">
@@ -106,9 +105,6 @@ map = new google.maps.Map(document.getElementById('map'), {
 								<h3>O que você procura?</h3>
 							</header>
 							<footer>
-								<ul class="buttons">
-								<a href="index.php?c=Marker&p=listar" class="button small">mostrar tudo</a>
-								</ul>
 								<ul class="buttons">
 									<li><a href="index.php?c=Marker&p=listarCategoria&categoria=1" class="button small">Pousadas/Hotéis</a></li>
 								</ul>	
@@ -123,7 +119,7 @@ map = new google.maps.Map(document.getElementById('map'), {
 						</section>
 					</div>
 
-		</div>
+			</div>
 	</div>
 </section>
 
