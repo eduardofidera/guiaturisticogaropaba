@@ -2,7 +2,7 @@
 class MarkerController{
 	public function cadastrar(){
 		$nome = filter_input(INPUT_POST, 'nome');
-		$lat = filter_input(INPUT_POST, 'lat');
+		$lat = filter_input(INPUT_GET, 'lat');
 		$longi = filter_input(INPUT_POST, 'longi');
 		$categoria = filter_input(INPUT_POST, 'categoria');
 		$descricao = filter_input(INPUT_POST, 'descricao');

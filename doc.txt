@@ -3,6 +3,8 @@ anotar os itinerários de todos ônibus com destino e origem á Garopaba (e todo
 anotar basicos pontos turísticos com referência e detalhes de localização.
 traçar no google maps (usando API) as rotas dos onibus.
 gerar markers em localizações de pontos turísticos.
+listar todos os markers na pagina com seus nomes, descricao, etc
+
 
  --  --
 - procurar nos sites de transporte (Paulotur, Santo Anjo e GMídia) os horários e rotas de ônibus.
@@ -28,3 +30,4 @@ categorias -\/
 auth0
 laravel
 angularJS
+
