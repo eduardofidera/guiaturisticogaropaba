@@ -10,6 +10,12 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!-- Important Owl stylesheet -->
 		<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+		
+		<!-- Vex modal -->
+		<script src="assets/js/vex.combined.min.js"></script>
+		<script>vex.defaultOptions.className = 'vex-theme-os'</script>
+		<link rel="stylesheet" href="assets/css/vex.css" />
+		<link rel="stylesheet" href="assets/css/vex-theme-os.css" />
 
 		<!-- chamando o AngularJS-->
  		<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->

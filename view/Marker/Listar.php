@@ -186,6 +186,11 @@ function map3 () {
 					
 			// Quando clicar no marker
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
+				echo "vex.dialog.alert({
+	message: '$marker->nome como chegar: kkk',
+	showCloseButton: true
+}),";
+			
 				// Nome
 				echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
 				
@@ -200,6 +205,8 @@ function map3 () {
 		}
 	
 ?>
+
+
 }
 	
 					</script>
