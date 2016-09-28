@@ -13,15 +13,10 @@
 		
 		<!-- Vex modal -->
 		<script src="assets/js/vex.combined.min.js"></script>
-		<script>vex.defaultOptions.className = 'vex-theme-os'</script>
 		<link rel="stylesheet" href="assets/css/vex.css" />
 		<link rel="stylesheet" href="assets/css/vex-theme-os.css" />
-
-		<!-- chamando o AngularJS-->
- 		<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
-
-		<!-- Default Theme -->
-		<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+		<link rel="stylesheet" href="assets/css/vex-theme-flat-attack.css" />
+		
 	</head>
 	<body class="index">
 		<div id="page-wrapper">
@@ -67,13 +62,11 @@
 				</section> 
 
 				<article id="main">
-<!-- view -->
-							<?php 
-		include $view;
-		?>
+				<!-- view -->
+				<?php 
+					include $view;
+				?>
 				</article>
-				<!-- Menu AngularJS -->
-				<!-- <div ng-app="myApp"	ng-controller="menuCtrl"> -->
 				
 			<!-- Footer -->
 				<footer id="footer">

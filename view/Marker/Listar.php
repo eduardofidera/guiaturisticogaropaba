@@ -56,18 +56,13 @@ function maptudo () {
 			
 			echo "});";
 			
-				
-					
-			// Quando clicar no marker
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
-				// Nome
-				echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
-				
-				// Directions
-				echo "document.getElementById('direction').innerHTML = '<a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',";
-				
-				// Descrição
-				echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
+			echo "vex.open({
+	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',
+	showCloseButton: true,
+	placeholder: 'Ola',
+	className: 'vex-theme-flat-attack'
+})";
 				
 			echo "});";
 			
@@ -86,14 +81,7 @@ function map1 () {
 			echo "markers[$marker->id] = new google.maps.Marker({";
 			
     		echo "position: {lat: $marker->lat, lng: $marker->longi},";
-			// Ícone de acordo com a categoria
-			if ($marker->categoria == 1) {
-				echo "icon: 'images/pousada.png',";
-			} elseif ($marker->categoria == 2) {
-				echo "icon: 'images/restaurante.png',";
-			} elseif ($marker->categoria == 3) {
-				echo "icon: 'images/praia.png',";
-			}
+			echo "icon: 'images/pousada.png',";
     		echo "map: map";
 			
 			echo "});";
@@ -102,14 +90,12 @@ function map1 () {
 					
 			// Quando clicar no marker
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
-				// Nome
-				echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
-				
-				// Directions
-				echo "document.getElementById('direction').innerHTML = '<a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',";
-				
-				// Descrição
-				echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
+			echo "vex.open({
+	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',
+	showCloseButton: true,
+	placeholder: 'Ola',
+	className: 'vex-theme-flat-attack'
+})";
 				
 			echo "});";
 			}
@@ -118,7 +104,7 @@ function map1 () {
 ?>
 }
 
-// Método do mapa com markers na categoria 1
+// Método do mapa com markers na categoria 2
 function map2 () {
 	<?php
 			echo "var markers = new Array();";
@@ -128,14 +114,7 @@ function map2 () {
 			echo "markers[$marker->id] = new google.maps.Marker({";
 			
     		echo "position: {lat: $marker->lat, lng: $marker->longi},";
-			// Ícone de acordo com a categoria
-			if ($marker->categoria == 1) {
-				echo "icon: 'images/pousada.png',";
-			} elseif ($marker->categoria == 2) {
-				echo "icon: 'images/restaurante.png',";
-			} elseif ($marker->categoria == 3) {
-				echo "icon: 'images/praia.png',";
-			}
+			echo "icon: 'images/restaurante.png',";
     		echo "map: map";
 			
 			echo "});";
@@ -144,14 +123,12 @@ function map2 () {
 					
 			// Quando clicar no marker
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
-				// Nome
-				echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
-				
-				// Directions
-				echo "document.getElementById('direction').innerHTML = '<a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',";
-				
-				// Descrição
-				echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
+			echo "vex.open({
+	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',
+	showCloseButton: true,
+	placeholder: 'Ola',
+	className: 'vex-theme-flat-attack'
+})";
 				
 			echo "});";
 			}
@@ -170,14 +147,7 @@ function map3 () {
 			echo "markers[$marker->id] = new google.maps.Marker({";
 			
     		echo "position: {lat: $marker->lat, lng: $marker->longi},";
-			// Ícone de acordo com a categoria
-			if ($marker->categoria == 1) {
-				echo "icon: 'images/pousada.png',";
-			} elseif ($marker->categoria == 2) {
-				echo "icon: 'images/restaurante.png',";
-			} elseif ($marker->categoria == 3) {
-				echo "icon: 'images/praia.png',";
-			}
+			echo "icon: 'images/praia.png',";
     		echo "map: map";
 			
 			echo "});";
@@ -186,19 +156,12 @@ function map3 () {
 					
 			// Quando clicar no marker
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
-				echo "vex.dialog.alert({
-	message: '$marker->nome como chegar: kkk',
-	showCloseButton: true
-}),";
-			
-				// Nome
-				echo "document.getElementById('titulo').innerHTML = '<h3>$marker->nome</h3>',";
-				
-				// Directions
-				echo "document.getElementById('direction').innerHTML = '<a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',";
-				
-				// Descrição
-				echo "document.getElementById('descricao').innerHTML = 'Descrição: $marker->descricao'";
+			echo "vex.open({
+	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',
+	showCloseButton: true,
+	placeholder: 'Ola',
+	className: 'vex-theme-flat-attack'
+})";
 				
 			echo "});";
 			}
@@ -242,32 +205,6 @@ function map3 () {
 						</section>
 					</div>
 
-		</div>
-	</div>
-</section>
-
-<section class="wrapper style2 container">
-	<div class="row 150%">
-		<div class="8u 12u(narrower)">
-	
-	<!-- Detalhes do marker -->
-	<section id="detalhes">
-		<header id="titulo">
-		</header>
-		
-		<div id="descricao">
-		
-		</div>
-		
-		<div id="direction">
-		
-		</div>
-		<div id="imagem">
-		
-		</div>
-		
-	</section>
-	
 		</div>
 	</div>
 </section>

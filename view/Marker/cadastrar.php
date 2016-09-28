@@ -10,13 +10,13 @@
 
 				
 				<div class="field">
-				<label>Latitude: </label>
-					<input type="text" name="lat" id="lat" value="">
+				<label id="lat1">Latitude: </label>
+					<input type="text" name="lat" id="lat" value="" readonly>
 				</div>
 				
 				<div class="field">
-				<label>Longitude: </label>
-					<input type="text" name="longi" id="longi" value="">
+				<label id="long1">Longitude: </label>
+					<input type="text" name="longi" id="longi" value="" readonly>
 				</div>
 				
 				
