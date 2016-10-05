@@ -52,10 +52,9 @@ class Marker{
 
 	public function listar(){
 		$db = new Db();
-		$categoria = filter_input(INPUT_GET, 'categoria');
-		if ($categoria){
-		$categoria = filter_input(INPUT_GET, 'categoria');
-		$rs = $db->query ('SELECT * FROM markers WHERE categoria = '.$categoria);
+		$idmarker = filter_input(INPUT_GET, 'idmarker');
+		if ($idmarker){
+		$rs = $db->query ('SELECT * FROM markers WHERE id = '.$idmarker);
 		$markers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
 		return $markers;
 	} else {

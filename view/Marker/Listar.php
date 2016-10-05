@@ -58,7 +58,7 @@ function maptudo () {
 			
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
 			echo "vex.open({
-	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',
+	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a> <br /> <a href=index.php?c=Marker&p=listarDetalhes&idmarker=$marker->id#detalhes target=_blank> Mais detalhes</a>',
 	showCloseButton: true,
 	placeholder: 'Ola',
 	className: 'vex-theme-flat-attack'
@@ -91,7 +91,7 @@ function map1 () {
 			// Quando clicar no marker
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
 			echo "vex.open({
-	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',
+	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a> <br /> <a href=index.php?c=Marker&p=listarDetalhes&idmarker=$marker->id#detalhes target=_blank> Mais detalhes</a>',
 	showCloseButton: true,
 	placeholder: 'Ola',
 	className: 'vex-theme-flat-attack'
@@ -124,7 +124,7 @@ function map2 () {
 			// Quando clicar no marker
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
 			echo "vex.open({
-	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',
+	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a> <br /> <a href=index.php?c=Marker&p=listarDetalhes&idmarker=$marker->id#detalhes target=_blank> Mais detalhes</a>',
 	showCloseButton: true,
 	placeholder: 'Ola',
 	className: 'vex-theme-flat-attack'
@@ -157,7 +157,7 @@ function map3 () {
 			// Quando clicar no marker
 			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
 			echo "vex.open({
-	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a>',
+	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a> <br /> <a href=index.php?c=Marker&p=listarDetalhes&idmarker=$marker->id#detalhes target=_blank> Mais detalhes</a>',
 	showCloseButton: true,
 	placeholder: 'Ola',
 	className: 'vex-theme-flat-attack'

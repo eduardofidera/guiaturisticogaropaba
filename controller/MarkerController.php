@@ -33,5 +33,11 @@ class MarkerController{
 		$view = 'view/Marker/listar.php';
 		include 'template/template.php';
 	}
+	
+	public function listarDetalhes() {
+		$markers = Marker::listar();
+		$view = 'view/Marker/listarDetalhes.php';
+		include 'template/template.php';
+	}
 }
 ?>
