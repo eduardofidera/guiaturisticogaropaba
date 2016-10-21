@@ -1,6 +1,9 @@
-﻿<section class="wrapper style4 container">
+﻿
+<section class="wrapper style4 container">
+	<section id="metodolistar">
 	<div class="row 150%">
 		<div class="8u 12u(narrower)">
+			
 		
 			<section id="map">
 				<div id="map">
@@ -36,6 +39,17 @@ map = new google.maps.Map(document.getElementById('map'), {
 
 // Método do mapa com todos os markers
 function maptudo () {
+		var modal = document.getElementById('myModal');
+	var content = document.getElementById('content');
+	var span = document.getElementsByClassName('close')[0];
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
 	<?php
 			echo "var markers = new Array();";
 			foreach ($markers as $marker) {
@@ -56,15 +70,8 @@ function maptudo () {
 			
 			echo "});";
 			
-			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
-			echo "vex.open({
-	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a> <br /> <a href=index.php?c=Marker&p=listarDetalhes&idmarker=$marker->id#detalhes target=_blank> Mais detalhes</a>',
-	showCloseButton: true,
-	placeholder: 'Ola',
-	className: 'vex-theme-flat-attack'
-})";
-				
-			echo "});";
+			// Quando clicar no marker
+			include 'Listar.markerclick.php';
 			
 		}
 	
@@ -73,6 +80,17 @@ function maptudo () {
 
 // Método do mapa com markers na categoria 1
 function map1 () {
+	var modal = document.getElementById('myModal');
+	var content = document.getElementById('content');
+	var span = document.getElementsByClassName('close')[0];
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
 	<?php
 			echo "var markers = new Array();";
 			foreach ($markers as $marker) {
@@ -89,23 +107,27 @@ function map1 () {
 				
 					
 			// Quando clicar no marker
-			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
-			echo "vex.open({
-	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a> <br /> <a href=index.php?c=Marker&p=listarDetalhes&idmarker=$marker->id#detalhes target=_blank> Mais detalhes</a>',
-	showCloseButton: true,
-	placeholder: 'Ola',
-	className: 'vex-theme-flat-attack'
-})";
-				
-			echo "});";
+			include 'Listar.markerclick.php';
 			}
 		}
 	
 ?>
+
 }
 
 // Método do mapa com markers na categoria 2
 function map2 () {
+	var modal = document.getElementById('myModal');
+	var content = document.getElementById('content');
+	var span = document.getElementsByClassName('close')[0];
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
 	<?php
 			echo "var markers = new Array();";
 			foreach ($markers as $marker) {
@@ -122,15 +144,7 @@ function map2 () {
 				
 					
 			// Quando clicar no marker
-			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
-			echo "vex.open({
-	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a> <br /> <a href=index.php?c=Marker&p=listarDetalhes&idmarker=$marker->id#detalhes target=_blank> Mais detalhes</a>',
-	showCloseButton: true,
-	placeholder: 'Ola',
-	className: 'vex-theme-flat-attack'
-})";
-				
-			echo "});";
+			include 'Listar.markerclick.php';
 			}
 		}
 	
@@ -139,6 +153,17 @@ function map2 () {
 
 // Método do mapa com markers na categoria 3
 function map3 () {
+	var modal = document.getElementById('myModal');
+	var content = document.getElementById('content');
+	var span = document.getElementsByClassName('close')[0];
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
 	<?php
 			echo "var markers = new Array();";
 			foreach ($markers as $marker) {
@@ -155,58 +180,73 @@ function map3 () {
 				
 					
 			// Quando clicar no marker
-			echo "google.maps.event.addListener(markers[$marker->id],'click',function() {";
-			echo "vex.open({
-	unsafeContent: '$marker->nome <br /> <a href=https://maps.google.com?saddr=Current+Location&daddr=$marker->lat,$marker->longi target=_blank>Como chegar</a> <br /> <a href=index.php?c=Marker&p=listarDetalhes&idmarker=$marker->id#detalhes target=_blank> Mais detalhes</a>',
-	showCloseButton: true,
-	placeholder: 'Ola',
-	className: 'vex-theme-flat-attack'
-})";
-				
-			echo "});";
+			include 'Listar.markerclick.php';
 			}
 		}
 	
 ?>
-
-
 }
 	
 					</script>
 					
 					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPH9u0Vnivgf75V_IhVAeFtF11_t77Smw&callback=initMap">
 					</script>
+					
 				</div>	
 			</section>
 		</div>
-
-		<div class="4u 12u(narrower)">
-
-					<!-- Opções -->
-					<div class="sidebar">
-						<section id="opcoes">
-							<header>
-								<h3>O que você procura?</h3>
-							</header>
-							<footer>
-								<ul class="buttons">
-									<li><button onclick="initMap(), maptudo()" class="button small"><h1>Mostrar tudo</h1></button>
-								</ul>
-								<ul class="buttons">
-									<li><button onclick="initMap(), map1()" class="button small"><h1>Pousadas e hotéis</h1></button>
-								</ul>	
-								<ul class="buttons">
-									<li><button onclick="initMap(), map2()" class="button small"><h1>Comida</h1></button>
-								</ul>
-								<ul class="buttons">
-									<li><button onclick="initMap(), map3()" class="button small"><h1>Praias e <br /> pontos turísticos</h1></button>
-								</ul>				
-							</footer>
-						</section>
-					</div>
-
-		</div>
+		
+		<script type="text/javascript">
+		function detalhes (){
+			document.getElementById('detalhes').innerHTML = '';
+			<?php
+			foreach ($markers as $marker) {
+				include 'Listar.detalhes.php';
+			}
+			?>
+		}
+		
+		function detalhes1() {
+			document.getElementById('detalhes').innerHTML = '';
+			<?php
+			foreach ($markers as $marker) {
+				if ($marker->categoria == 1) {
+				include 'Listar.detalhes.php';
+			}
+			}
+			?>
+		}
+		
+		function detalhes2() {
+			document.getElementById('detalhes').innerHTML = '';
+			<?php
+			foreach ($markers as $marker) {
+				if ($marker->categoria == 2) {
+					include 'Listar.detalhes.php';
+				}
+			}
+			?>
+		}
+		
+		function detalhes3() {
+			document.getElementById('detalhes').innerHTML = '';
+			<?php
+			foreach ($markers as $marker) {
+				if ($marker->categoria == 3) {
+				include 'Listar.detalhes.php';
+					}
+				}
+			?>
+		}
+		
+		
+		</script>
+		<?php
+			include 'Listar.botoes.php';
+		?>
+		
 	</div>
+	</section>
 </section>
 	
 				
