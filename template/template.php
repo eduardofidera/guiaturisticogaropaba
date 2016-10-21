@@ -8,6 +8,15 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!-- Important Owl stylesheet -->
+		<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+		
+		<!-- Vex modal -->
+		<script src="assets/js/vex.combined.min.js"></script>
+		<link rel="stylesheet" href="assets/css/vex.css" />
+		<link rel="stylesheet" href="assets/css/vex-theme-os.css" />
+		<link rel="stylesheet" href="assets/css/vex-theme-flat-attack.css" />
+		
 	</head>
 	<body class="index">
 		<div id="page-wrapper">
@@ -30,25 +39,33 @@
 				</header>
 						
 			<!-- Banner -->
-				<section id="banner">
-				</section>
+				 <section id="banner">				
+					<div class="inner">
+						<header>
+						<h2> Garopaba </h2>
+						</header>
+						<br />
+						<br />
+						<p>A diversidade de pontos <strong>turísticos</strong>,
+						<br />
+						<strong>gastronômicos</strong> e <strong>hospedagens</strong>
+						<br />
+						<br />
+						<footer>
+							<ul class="buttons vertical">
+								<li><a href="index.php?c=Marker&p=listar#map" class="button fit scrolly">VER MAPA</a></li>
+							</ul>
+						</footer>
+
+					</div>
+
+				</section> 
 
 				<article id="main">
-					<!-- The Modal -->
-					<div id="myModal" class="modal">
-						<!-- Modal content -->
-							<div class="modal-content">
-								<span class="close">x</span>
-								<div id="content">
-
-								</div>
-							</div>
-					</div>
-					
-					<!-- view -->
-					<?php 
-						include $view;
-					?>
+				<!-- view -->
+				<?php 
+					include $view;
+				?>
 				</article>
 				
 			<!-- Footer -->
@@ -82,6 +99,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/owl-carousel/owl.carousel.js"></script>
 			
 	</body>
 </html>

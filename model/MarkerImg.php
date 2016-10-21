@@ -1,12 +1,12 @@
 <?php
-class Imagem{
+class MarkerImg{
 	public $idMarker;
 	public $local;
 
 	function __construct( $id = NULL ){
 		if( !empty($id) ){
 			$db = new Db();
-			$rs = $db->prepare('SELECT * FROM imagens WHERE idMarker = :id');
+			$rs = $db->prepare('SELECT * FROM markerimg WHERE idMarker = :id');
 			$rs->bindParam(':id', $idMarker);
 			$rs->execute();
 			$row = $rs->fetch(PDO::FETCH_OBJ);
@@ -20,14 +20,14 @@ class Imagem{
 	public function save(){		
 		$db = new Db();
 		if( $this->id ){ 
-			$sql = 'UPDATE imagens SET idMarker=:idmarker, local=:local WHERE idMarker = :idmarker';
+			$sql = 'UPDATE markerimg SET idMarker=:idmarker, local=:local WHERE idMarker = :idmarker';
 			$sth = $db->prepare($sql);
 			$sth->bindParam(':idMarker', $this->idMarker);
 			$sth->bindParam(':local', $this->local);
 			return $sth->execute();
 		}
 		else{ 	
-			$sql = 'INSERT INTO imagens (idmarker, local) VALUES (:idmarker, :local)';
+			$sql = 'INSERT INTO markerimg (idmarker, local) VALUES (:idmarker, :local)';
 			$sth = $db->prepare($sql);
 			$sth->bindParam(':idmarker', $this->idMarker);
 			$sth->bindParam(':local', $this->local);
@@ -37,9 +37,9 @@ class Imagem{
 
 	public function listar(){
 		$db = new Db();
-		$rs = $db->query('SELECT * FROM imagens');
-		$imagens = $rs->fetchAll(PDO::FETCH_CLASS, 'Imagem');
-		return $imagens;
+		$rs = $db->query('SELECT * FROM markerimg');
+		$allimgs = $rs->fetchAll(PDO::FETCH_CLASS, 'MarkerImg');
+		return $allimgs;
 	}
 
 

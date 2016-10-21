@@ -2,7 +2,8 @@
 
 require 'lib/Db.php';
 require 'model/Marker.php';
-require 'model/Imagem.php';
+require 'model/MarkerImg.php';
+// require 'model/Rotas.php';
 
 #controller de inicio
 $controller = filter_input(INPUT_GET,'c');
