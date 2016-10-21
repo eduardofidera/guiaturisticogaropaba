@@ -1,7 +1,5 @@
 CREATE DATABASE guiaturisticogrb;
 USE guiaturisticogrb;
 
-CREATE TABLE rotas (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,nome VARCHAR(50) NOT NULL, origemlat FLOAT NOT NULL, origemlongi FLOAT NOT NULL,
- destinolat FLOAT NOT NULL, destinolongi FLOAT NOT NULL, descricao VARCHAR(250));
 CREATE TABLE markers(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, nome VARCHAR(50) NOT NULL, lat FLOAT NOT NULL, longi FLOAT NOT NULL, categoria INT NOT NULL, descricao VARCHAR(250));
-CREATE TABLE markerImg(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, local VARCHAR(200) NOT NULL, idMarker INT NOT NULL, foreign key (idMarker) references markers(id));
+CREATE TABLE imagens(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, local VARCHAR(200) NOT NULL, idMarker INT NOT NULL, foreign key (idMarker) references markers(id));
