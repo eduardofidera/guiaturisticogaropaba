@@ -2,7 +2,10 @@
 <section class="wrapper style4 container">
 	<section id="metodolistar">
 	<div class="row 150%">
-		<div class="8u 12u(narrower)">
+	<?php
+			include 'Listar.botoes.php';
+		?>
+		<div class="9u 12u(narrower)">
 			
 		
 			<section id="map">
@@ -241,9 +244,11 @@ function map3 () {
 		
 		
 		</script>
-		<?php
-			include 'Listar.botoes.php';
-		?>
+		<div class="8u 12u(narrower)">
+			<div id="detalhes">
+
+			</div>
+		</div>
 		
 	</div>
 	</section>

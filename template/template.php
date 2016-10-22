@@ -14,16 +14,17 @@
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.php">Guia Turístico <span>Garopaba</span></a></h1>
+					<h1><a href="index.php"><img src="images/logo.png" class="icons1">Guia Turístico <span>Garopaba</span></a></h1>
 					<nav id="nav">
 						<ul>	
-							<li class="current"><a href="index.php?c=Marker&p=listar">MAPA</a></li>
+							<!-- <li class="current"><a href="index.php?c=Marker&p=listar">MAPA</a></li>
 							<li class="submenu">
 								<a href="#">Métodos</a>
 								<ul>
 									<li><a href="index.php?c=Marker&p=cadastrar">Cadastrar Marker</a></li>
 								</ul>
 							</li>
+							-->
 							<li><a href="#" class="button special">Sign Up</a></li>
 						</ul>
 					</nav>

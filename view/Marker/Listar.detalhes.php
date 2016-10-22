@@ -16,13 +16,25 @@
 				
 				echo "descricao = document.createElement('p');";
 				echo "descricao.setAttribute('class', 'descricao');";
+				
+				
 				echo "t = document.createTextNode('$marker->descricao');";
 				echo "descricao.appendChild(t);";
+				
 				echo "detail.appendChild(title);";
 				echo "detail.appendChild(descricao);";
 				
+				echo "icon = document.createElement('div');";
+				echo "createArrow = document.createElement('img');";
+				echo "createArrow.setAttribute('src', 'images/rightarrow.png');";
+				echo "createArrow.setAttribute('class', 'arrow');";
+				echo "icon.appendChild(createArrow);";
+				echo "list.appendChild(icon);";
+				
+				
 
 				echo "list.appendChild(detail);";
+				echo "list.appendChild(icon);";
 				
 				foreach ($imagens as $imagem) {
 					if ($imagem->idMarker == $marker->id) {
@@ -33,9 +45,9 @@
 							echo "createImg.setAttribute('class', 'imagem');";
 							echo "photo.appendChild(createImg);";
 							echo "list.appendChild(photo);";
-						
 					}
 				}
+				
 				
 				
 				echo "document.getElementById('detalhes').appendChild(list);";
