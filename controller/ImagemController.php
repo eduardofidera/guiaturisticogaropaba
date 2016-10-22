@@ -14,14 +14,14 @@ class ImagemController{
 			$i->save();
       header("Location: index.php?c=Marker&p=listar");
 		}
-		$view = 'view/Imagem/cadastrar.php';
+		$view = 'view/Imagem/Cadastrar.php';
 		include 'template/template.php';
 
   }
 
   public function listar(){
 		$imagens = Imagem::listar();
-		$view = 'view/Marker/listar.php';
+		$view = 'view/Marker/Listar.php';
 		include 'template/template.php';
 	}
 

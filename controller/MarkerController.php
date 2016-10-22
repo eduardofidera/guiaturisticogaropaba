@@ -18,21 +18,21 @@ class MarkerController{
 			$a->save();
 			header("Location: index.php?c=Marker&p=listar");
 		}
-		$view = 'view/Marker/cadastrar.php';
+		$view = 'view/Marker/Cadastrar.php';
 		include 'template/template.php';
 	}
 
 	public function listar(){
 		$markers = Marker::listar();
 		$imagens = Imagem::listar();
-		$view = 'view/Marker/listar.php';
+		$view = 'view/Marker/Listar.php';
 		include 'template/template.php';
 	}
 
 	public function listarDetalhes() {
 		$marker = Marker::listar();
 		$imagens = Imagem::listar();
-		$view = 'view/Marker/listarDetalhes.php';
+		$view = 'view/Marker/ListarDetalhes.php';
 		include 'template/template.php';
 	}
 }
