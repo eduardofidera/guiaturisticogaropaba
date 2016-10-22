@@ -6,7 +6,7 @@ class MarkerController{
 		$longi = filter_input(INPUT_POST, 'longi');
 		$categoria = filter_input(INPUT_POST, 'categoria');
 		$descricao = filter_input(INPUT_POST, 'descricao');
-		
+
 		if ($nome){
 						# o formulario foi enviado
 			$a = new Marker();
@@ -29,18 +29,11 @@ class MarkerController{
 		include 'template/template.php';
 	}
 
-		public function img(){
-		$imgproperties = Marker::getImg();
-		$view = 'view/Marker/listar.php';
-		include 'template/template.php';
-	}
-	
 	public function listarDetalhes() {
-		$markers = Marker::listar();
+		$marker = Marker::listar();
 		$imagens = Imagem::listar();
 		$view = 'view/Marker/listarDetalhes.php';
 		include 'template/template.php';
 	}
-	
 }
 ?>

@@ -25,7 +25,7 @@ class Marker{
 		}
 	}
 
-	public function save(){		
+	public function save(){
 		$db = new Db();
 		if( $this->id ){ 	# update, se o id existir no bd
 			$sql = 'UPDATE marker SET nome=:nome, lat=:lat, longi=:longi, categoria=:categoria, descricao=:descricao WHERE id = :id';
@@ -63,17 +63,6 @@ class Marker{
 		return $markers;
 	}
 	}
-
-
 	
-
-
-/*	public function addImg(){
-		$db = new Db();
-		$local = filter_input($_POST,'local');
-		$img = WideImage::load('');
-		$sql = 'INSERT INTO markerImg()'
-	}*/
 }
 ?>
-

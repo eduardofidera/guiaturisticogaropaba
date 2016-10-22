@@ -1,32 +1,36 @@
 <?php
 class Imagem{
+	public $id;
 	public $idMarker;
 	public $local;
+	private $altura;
+	private $largura;
 
 	function __construct( $id = NULL ){
 		if( !empty($id) ){
 			$db = new Db();
-			$rs = $db->prepare('SELECT * FROM imagens WHERE idMarker = :id');
-			$rs->bindParam(':id', $idMarker);
+			$rs = $db->prepare('SELECT * FROM imagens WHERE id = :id');
+			$rs->bindParam(':id', $id);
 			$rs->execute();
 			$row = $rs->fetch(PDO::FETCH_OBJ);
 			if($row){
-				$this->idmarker = $row->idmarker;
+				$this->id = $row->id;
+				$this->idMarker = $row->idMarker;
 				$this->local = $row->local;
 			}
 		}
 	}
 
-	public function save(){		
+	public function save(){
 		$db = new Db();
-		if( $this->id ){ 
+		if( $this->id ){
 			$sql = 'UPDATE imagens SET idMarker=:idmarker, local=:local WHERE idMarker = :idmarker';
 			$sth = $db->prepare($sql);
 			$sth->bindParam(':idMarker', $this->idMarker);
 			$sth->bindParam(':local', $this->local);
 			return $sth->execute();
 		}
-		else{ 	
+		else{
 			$sql = 'INSERT INTO imagens (idmarker, local) VALUES (:idmarker, :local)';
 			$sth = $db->prepare($sql);
 			$sth->bindParam(':idmarker', $this->idMarker);
@@ -41,14 +45,5 @@ class Imagem{
 		$imagens = $rs->fetchAll(PDO::FETCH_CLASS, 'Imagem');
 		return $imagens;
 	}
-
-
-/*	public function addImg(){
-		$db = new Db();
-		$local = filter_input($_POST,'local');
-		$img = WideImage::load('');
-		$sql = 'INSERT INTO markerImg()'
-	}*/
 }
 ?>
-
