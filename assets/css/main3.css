@@ -1,10 +1,14 @@
+.detalhes.search{
+	background-color:#fff;
+}
+
+.logo1{
+	height:48px;
+	vertical-align:middle;
+}
 
 
-/*
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 .arrow{
 		float:right;
 		height: 132px;
@@ -55,7 +59,7 @@ vertical-align:middle;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
+	width: 360px;
 }
 
 /* The Close Button */
@@ -73,8 +77,6 @@ vertical-align:middle;
     cursor: pointer;
 }
 
-
-/* Reset */
 	
 	.icon-button{
 	cursor: pointer;
@@ -112,7 +114,7 @@ vertical-align:middle;
 	}
 	
 	.list{
-    height: 132px;
+    height: 162px;
     padding: 1px;
     background-color: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075);
@@ -120,13 +122,11 @@ vertical-align:middle;
 	display:block;
 	border: 1px solid #ECEAE2;
 	}
-	
+
 	
 	.imagem{
-		width: 180px;
-		height: 128px;
-		top: 1px;
-		left: 1px;
+		width: 164px;
+		height: 158px;
 		border-right: 1px solid #eceae2;
 		line-height: 1em;
 		
@@ -1722,7 +1722,7 @@ vertical-align:middle;
 	}
 
 		a:hover {
-			border-bottom-color: #403EB3;
+			border-bottom-color: #83d3c9;
 		}
 
 	strong, b {
@@ -1737,7 +1737,6 @@ vertical-align:middle;
 		color: inherit;
 		font-weight: 300;
 		line-height: 1.75em;
-		margin-bottom: 1em;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2200,9 +2199,9 @@ vertical-align:middle;
 		input[type="submit"].special,
 		input[type="reset"].special,
 		.button.special {
-			background: #83d3c9;
+			background: #fff;
 			border-color: #83d3c9;
-			color: #fff !important;
+			color: rgba(0, 0, 0, 0.48) !important;
 			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.075);
 		}
 
@@ -2213,6 +2212,25 @@ vertical-align:middle;
 				background: #96dad1 !important;
 				border-color: #96dad1 !important;
 			}
+			
+			input[type="button"].special2,
+		input[type="submit"].special2,
+		input[type="reset"].special2,
+		.button.special2 {
+			background: #fff;
+			border-color: #83d3c9;
+			color: #83d3c9 !important;
+			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.075);
+		}
+
+			input[type="button"].special2:hover,
+			input[type="submit"].special2:hover,
+			input[type="reset"].special2:hover,
+			.button.special2:hover {
+				background: #96dad1 !important;
+				border-color: #96dad1 !important;
+			}
+
 
 		input[type="button"].fit,
 		input[type="submit"].fit,
@@ -2331,7 +2349,8 @@ vertical-align:middle;
 
 	#header {
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
-		color: inherit;
+		color: #fff;
+		background-color: rgba(130, 211, 202, 0.72);
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
@@ -2539,13 +2558,7 @@ vertical-align:middle;
 	}
 
 	#banner {
-		background-attachment: scroll;
-		background-color: #645862;
-		background-image:  url("images/overlay.png");
-		background-position: top left;
-		background-repeat: repeat;
-		background-size: auto, auto;
-		color: #fff;
+		background: #83d3c9;
 		cursor: default;
 		padding: 2.5em 0;
 		text-align: center;
@@ -2610,7 +2623,7 @@ vertical-align:middle;
 
 
 	#main {
-		background-color: #F4F3F0;
+		background-color: #E8EEF4;
 		padding: 7em 0;
 	}
 
@@ -2639,7 +2652,7 @@ vertical-align:middle;
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/sim.jpg"), url("../../images/banner.jpg");
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
@@ -2655,6 +2668,7 @@ vertical-align:middle;
 /* Footer */
 
 	#footer {
+		border-top: solid 5px #83d3c9;
 		background: #E8EEF4;
 		color: #7c8081;
 		padding: 5em 5em 10em 5em;

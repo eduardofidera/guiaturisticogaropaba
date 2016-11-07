@@ -6,16 +6,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main3.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body class="index">
 		<div id="page-wrapper">
-
+			
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1><a href="index.php"><img src="images/logo.png" class="icons1">Guia Turístico <span>Garopaba</span></a></h1>
+					<h1><a href="index.php"><img src="images/logo.png" class="logo1">Guia Turístico <span>Garopaba</span></a></h1>
 					<nav id="nav">
 						<ul>	
 							<!-- <li class="current"><a href="index.php?c=Marker&p=listar">MAPA</a></li>
@@ -26,17 +26,19 @@
 								</ul>
 							</li>
 							-->
-							<li><a href="#" class="button special">Sign Up</a></li>
+							<li><a href="#" class="button special2">Sign Up</a></li>
 						</ul>
 					</nav>
 				</header>
 						
 			<!-- Banner -->
 				<section id="banner">
+					</header>
 				</section>
 
 				<article id="main">
 					<!-- The Modal -->
+					<div class="3u 12u(narrower)">
 					<div id="myModal" class="modal">
 						<!-- Modal content -->
 							<div class="modal-content">
@@ -45,6 +47,7 @@
 
 								</div>
 							</div>
+					</div>
 					</div>
 					
 					<!-- view -->
