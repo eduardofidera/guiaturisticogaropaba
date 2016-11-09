@@ -243,6 +243,7 @@ function map3 () {
 		}
 		
 		
+		
 		</script>
 		<div class="8u 12u(narrower)">
 			<div id="detalhes">

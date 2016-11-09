@@ -31,10 +31,9 @@ vertical-align:middle;
 	height: 14px;
 }
 .dir {
-	height: 40px;
     margin-top: 16px;
     border-top: 1px #f0f0f0 solid;
-    font-size: 1.0835em;
+    font-size: 0.7835em;
     color: #069;
     line-height: 40px;
     cursor: pointer;
@@ -135,7 +134,7 @@ vertical-align:middle;
 	.detail{
 			position: absolute;
 		    margin-left: 180px;
-			padding: 18px 0 12px 18px;
+			padding: 16px 0 12px 0px;
 	}
 	
 	.title {
@@ -2199,9 +2198,9 @@ vertical-align:middle;
 		input[type="submit"].special,
 		input[type="reset"].special,
 		.button.special {
-			background: #fff;
+			background: #83d3c9;
 			border-color: #83d3c9;
-			color: rgba(0, 0, 0, 0.48) !important;
+			color: #fff !important;
 			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.075);
 		}
 
