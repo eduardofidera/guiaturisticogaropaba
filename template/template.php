@@ -11,12 +11,31 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body class="index">
-		<div id="page-wrapper">
-			
+	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1187862927918347',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+
+		<div id="page-wrapper">	
 			<!-- Header -->
 				<header id="header" class="alt">
 					<h1><a href="index.php"><img src="images/logo.png" class="logo1">Guia Turístico <span>Garopaba</span></a></h1>
 					<nav id="nav">
+
 						<ul>	
 							<!-- <li class="current"><a href="index.php?c=Marker&p=listar">MAPA</a></li>
 							<li class="submenu">
@@ -26,8 +45,23 @@
 								</ul>
 							</li>
 							-->
-							<li><a href="#" class="button special2">Sign Up</a></li>
+							<li>
+								<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+								</fb:login-button>
+
+								<div id="status">
+								</div>
+						
+								<div
+ 								 class="fb-like"
+ 								 data-share="true"
+ 								 data-width="400"
+  								data-show-faces="true">
+								</div>
+							</li>
 						</ul>
+
+
 					</nav>
 				</header>
 						
@@ -38,6 +72,7 @@
 
 				<article id="main">
 					<!-- The Modal -->
+
 					<div class="3u 12u(narrower)">
 					<div id="myModal" class="modal">
 						<!-- Modal content -->
@@ -54,23 +89,27 @@
 					<?php 
 						include $view;
 					?>
+
 				</article>
 				
 			<!-- Footer -->
 				<footer id="footer">
-				
-				
+				<!-- links -->
+					<script>			
+						function link_github() {
+    						window.open('https://github.com/eduardofidera/guiaturisticogaropaba', '_blank');
+					}
+						function link_google(){
+							window.open('https://www.google.com', '_blank');
+						}
+					</script>
 
 					<ul class="icons">
-						<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-						<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a newtab="yes" href="javascript:link_github()" class="icon circle fa-github"><span class="label">Github</span></a></li>
 					</ul>
 
 					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="#map">Me</a></li>
+						<li>&copy;Images by <a href="javascript:link_google()">Google</a></li>
 					</ul>
 
 				</footer>

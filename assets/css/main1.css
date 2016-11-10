@@ -1990,13 +1990,13 @@ vertical-align:middle;
 			border-radius: 100%;
 			display: inline-block;
 			font-size: 1.25em;
-			height: 2.25em;
+			height: 64px;
 			left: 0;
 			line-height: 2.25em;
 			text-align: center;
 			text-decoration: none;
 			top: 0;
-			width: 2.25em;
+			width: 64px;
 		}
 
 			.icon.circle:hover {
@@ -2031,13 +2031,10 @@ vertical-align:middle;
 				}
 
 			.icon.circle.fa-github {
-				background: #dcad8b;
+				background: url("images/github2.png");
 				color: #fff;
 			}
 
-				.icon.circle.fa-github:hover {
-					background: #e1b89b;
-				}
 
 			.icon.circle.fa-dribbble {
 				background: #da83ae;
