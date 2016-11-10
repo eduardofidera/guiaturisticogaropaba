@@ -1,9 +1,15 @@
-.detalhes.search{
+.headerdetalhes{
+	border: 1px solid #ECEAE2;
 	background-color:#fff;
+	width:100%;
+	height: 64px;
 }
-
+.imagemdetalhes{
+	height: 480px;
+	width: 480px;
+}
 .logo1{
-	height:48px;
+	height:50px;
 	vertical-align:middle;
 }
 
@@ -243,6 +249,7 @@ vertical-align:middle;
 		.container {
 			width: 1200px;
 		}
+		
 
 	}
 
@@ -294,6 +301,10 @@ vertical-align:middle;
 
 		.container {
 			width: 95%;
+		}
+		.imagemdetalhes{
+			height: 360px;
+			width: 360px;
 		}
 
 	}
@@ -347,7 +358,16 @@ vertical-align:middle;
 		.container {
 			width: 100% !important;
 		}
-
+		.imagem{
+			width: 132px;
+		}
+		.detail{
+			margin-left: 150px;
+		}
+		.imagemdetalhes{
+			height: 180px;
+			width: 180px;
+		}
 	}
 
 /* Grid */
@@ -1970,13 +1990,13 @@ vertical-align:middle;
 			border-radius: 100%;
 			display: inline-block;
 			font-size: 1.25em;
-			height: 2.25em;
+			height: 64px;
 			left: 0;
 			line-height: 2.25em;
 			text-align: center;
 			text-decoration: none;
 			top: 0;
-			width: 2.25em;
+			width: 64px;
 		}
 
 			.icon.circle:hover {
@@ -2011,13 +2031,10 @@ vertical-align:middle;
 				}
 
 			.icon.circle.fa-github {
-				background: #dcad8b;
+				background: url("images/github2.png");
 				color: #fff;
 			}
 
-				.icon.circle.fa-github:hover {
-					background: #e1b89b;
-				}
 
 			.icon.circle.fa-dribbble {
 				background: #da83ae;
