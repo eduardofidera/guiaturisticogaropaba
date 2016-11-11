@@ -198,9 +198,8 @@ function map3 () {
 				</div>	
 			</section>
 		</div>
-		
-		<script type="text/javascript">
-		function detalhes (){
+<script>
+	function detalhes (){
 			document.getElementById('detalhes').innerHTML = '';
 			<?php
 			foreach ($markers as $marker) {
@@ -244,7 +243,7 @@ function map3 () {
 		
 		
 		
-		</script>
+</script>
 		<div class="8u 12u(narrower)">
 			<div id="detalhes">
 

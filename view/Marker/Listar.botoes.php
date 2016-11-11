@@ -5,7 +5,7 @@
 					<section id="opcoes">
 					<div>
 							<header>
-								<h3> O que você procura? </h3>
+								<h3> Escolha uma opção</h3>
 							</header>
 							<footer>
 								<ul>
@@ -36,7 +36,7 @@
 											</a>
 									</li>
 								</ul>
-								
+								<h1 style="font-size:15px">Clique no ícone para exibir detalhes.</h1>
 							</footer>
 					</div>
 				</section>
