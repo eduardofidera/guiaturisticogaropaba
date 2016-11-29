@@ -48,9 +48,10 @@
 				
 				// Adicionar a div 'detail' na div 'list'
 				echo "list.appendChild(detail);";
-				
+				$contador = false;
 				foreach ($imagens as $imagem) {
 					if ($imagem->idMarker == $marker->id) {
+						if (!$contador) {
 							// Imagem
 							echo "photo = document.createElement('div');";
 							echo "createImg = document.createElement('img');";
@@ -58,8 +59,11 @@
 							echo "createImg.setAttribute('class', 'imagem');";
 							echo "photo.appendChild(createImg);";
 							echo "list.appendChild(photo);";
+							$contador = true;
+						}
 					}
 				}
+				
 				
 				
 				

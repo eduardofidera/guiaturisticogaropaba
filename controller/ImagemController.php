@@ -4,7 +4,7 @@ class ImagemController{
     include 'controller/MarkerController.php';
     $markers = Marker::listar();
     $local = filter_input(INPUT_POST, 'local');
-    $idMarker = filter_input(INPUT_POST, 'idMarker');
+    $idMarker = filter_input(INPUT_GET, 'idMarker');
 
 		if ($local){
 						# o formulario foi enviado

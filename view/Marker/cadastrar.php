@@ -1,7 +1,7 @@
 <section class="wrapper style4 container">
 	<div class="row 150%">
 		<div class="8u 12u(narrower)">
-			<h3>Cadastrar um marker</h3>
+			<h2 style='border-bottom: 2px solid #83d3c9; '> Adicionar local </h2> <br />
 			<form name="cadastro" method="post">
 				<div class="field">
 					<label for="nome">Nome</label>
@@ -10,13 +10,13 @@
 
 				
 				<div class="field">
-				<label id="lat1">Latitude: </label>
-					<input type="text" name="lat" id="lat" value="" readonly>
+				<label id="lat1">Latitude </label>
+					<input type="text" name="lat" id="lat" value="Mover o marcador no mapa abaixo" readonly>
 				</div>
 				
 				<div class="field">
-				<label id="long1">Longitude: </label>
-					<input type="text" name="longi" id="longi" value="" readonly>
+				<label id="long1">Longitude </label>
+					<input type="text" name="longi" id="longi" value="Mover o marcador no mapa abaixo" readonly>
 				</div>
 				
 				
@@ -77,11 +77,11 @@ function initMap() {
 				</div>	
 		
 				<div class="field">
-					<label for="categoria">Categoria: </label>
+					<label for="categoria">Categoria </label>
 					<select name="categoria">
-					<option value="1">Pousada</option>
+					<option value="1">Acomodação</option>
 					<option value="2">Restaurante</option>
-					<option value="3">Praia</option>
+					<option value="3">Ponto turístico</option>
 					</select>
 				</div>
 		

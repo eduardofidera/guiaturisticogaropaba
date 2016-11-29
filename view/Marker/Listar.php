@@ -9,7 +9,6 @@
 			
 		
 			<section id="map">
-				<div id="map">
 
 					<script type="text/javascript">
 // Criação do mapa
@@ -38,21 +37,20 @@ map = new google.maps.Map(document.getElementById('map'), {
 }
 	getLocation();
 	
+	var span = document.getElementsByClassName('close')[0];
+	span.onclick = function() {
+		document.getElementById('myModal').style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == document.getElementById('myModal')) {
+			document.getElementById('myModal').style.display = "none";
+		}
+	}
+	
 }
 
 // Método do mapa com todos os markers
 function maptudo () {
-		var modal = document.getElementById('myModal');
-	var content = document.getElementById('content');
-	var span = document.getElementsByClassName('close')[0];
-	span.onclick = function() {
-		modal.style.display = "none";
-	}
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
 	<?php
 			echo "var markers = new Array();";
 			foreach ($markers as $marker) {
@@ -81,19 +79,8 @@ function maptudo () {
 ?>
 }
 
-// Método do mapa com markers na categoria 1
+// Método do mapa com markers na categoria 1 (acomodação)
 function map1 () {
-	var modal = document.getElementById('myModal');
-	var content = document.getElementById('content');
-	var span = document.getElementsByClassName('close')[0];
-	span.onclick = function() {
-		modal.style.display = "none";
-	}
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
 	<?php
 			echo "var markers = new Array();";
 			foreach ($markers as $marker) {
@@ -118,19 +105,8 @@ function map1 () {
 
 }
 
-// Método do mapa com markers na categoria 2
+// Método do mapa com markers na categoria 2 (restaurantes)
 function map2 () {
-	var modal = document.getElementById('myModal');
-	var content = document.getElementById('content');
-	var span = document.getElementsByClassName('close')[0];
-	span.onclick = function() {
-		modal.style.display = "none";
-	}
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
 	<?php
 			echo "var markers = new Array();";
 			foreach ($markers as $marker) {
@@ -154,19 +130,8 @@ function map2 () {
 ?>
 }
 
-// Método do mapa com markers na categoria 3
+// Método do mapa com markers na categoria 3 (o que fazer)
 function map3 () {
-	var modal = document.getElementById('myModal');
-	var content = document.getElementById('content');
-	var span = document.getElementsByClassName('close')[0];
-	span.onclick = function() {
-		modal.style.display = "none";
-	}
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
 	<?php
 			echo "var markers = new Array();";
 			foreach ($markers as $marker) {
@@ -195,8 +160,9 @@ function map3 () {
 					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPH9u0Vnivgf75V_IhVAeFtF11_t77Smw&callback=initMap">
 					</script>
 					
-				</div>	
+			
 			</section>
+			<a href="index.php?c=Marker&p=cadastrar" class="hidebutton"> Adicionar um local </a>
 		</div>
 <script>
 	function detalhes (){
@@ -244,6 +210,7 @@ function map3 () {
 		
 		
 </script>
+	
 		<div class="8u 12u(narrower)">
 			<div id="detalhes">
 

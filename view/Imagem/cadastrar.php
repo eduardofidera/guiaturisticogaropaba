@@ -1,7 +1,7 @@
 <section class="wrapper style4 container">
 	<div class="row 150%">
 		<div class="8u 12u(narrower)">
-			<h3>Cadastrar imagem</h3>
+			<h2 style='border-bottom: 2px solid #83d3c9; '> Adicionar imagem </h2> <br />
 
 			<form enctype="multipart/form-data" name="cadastro" method="post">
 				<div class="field">
