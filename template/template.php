@@ -15,12 +15,12 @@
 		<div id="page-wrapper">	
 			<!-- Header -->
 			<header id="header" class="alt">
-				<a href="index.php" style="color:#fff;"><img src="images/logo.png" class="logo1"></img>Guia Turístico GAROPABA</a>
+				<a href="index.php" style="color:#fff; margin-left:60px;"><img src="images/logo.png" class="logo1"></img>  Guia Turístico GAROPABA</a>
 
 					<nav id="nav">
 
 						<ul>
-							<li class="current"><a href="#main">HOME</a></li>						
+							<li class="current"><a style="margin-right:80px;" "href="#main">HOME</a></li>						
 						</ul>
 
 
@@ -39,23 +39,8 @@
 								<span class="close">x</span>
 								<div id="content">
 								
-									<div id="fb-root"></div>
-
-								<div
-									class="fb-login-button" 
-									data-max-rows="1" 
-									data-size="small"
-									data-show-faces="false" 
-									data-auto-logout-link="true">
-								</div>
-
-								<div 
- 									class="fb-like"
- 									data-share="false"
- 									data-width="400"
-  									data-show-faces="false">
-								</div>
-								
+								<h2> iae </h2>
+								<br />
 								</div>
 							</div>
 					</div>

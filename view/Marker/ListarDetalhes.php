@@ -1,11 +1,11 @@
-﻿<section id="informacao" class="wrapper style4 container" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075); margin-bottom:10px; padding-bottom:10px; ">
+﻿<section id="informacao" class="wrapper style3 container" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075); margin-bottom:10px; padding-bottom:10px; ">
 	<div class="row 150%">
 		<div class="12u 12u(narrower)" >
 		
 		<?php 
 			foreach ($marker as $thismarker) {
 				echo "<h2 style='border-bottom: 2px solid #83d3c9; '> $thismarker->nome</h2> <br />";
-				echo "<h3> Descrição </h3> <p>  $thismarker->descricao </p>";
+				echo "<p>  $thismarker->descricao </p>";
 				
 			}
 		?>
@@ -13,7 +13,8 @@
 	</div>
 </section>
 		
-<section id="imagemcarousel" class="wrapper style3 container" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075); ">
+		
+<section id="imagemcarousel" class="wrapper style4 container" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.075); padding:0; padding-top: 10px;">
 	<div class="row 150%">
 		<div class="12u 12u(narrower)" >
 		
@@ -21,6 +22,11 @@
     <!-- Generator: Jssor Slider Maker -->
     <!-- Source: http://www.jssor.com -->
     <!-- This code works with jquery library. -->
+	<div class="hidebutton" style="height:30px; margin-left: 20%;">
+					<?php 
+						echo "<p> Imagens de $thismarker->nome </p>";
+					?>
+				</div>
     <script src="assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="assets/js/jssor.slider-21.1.6.mini.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -123,6 +129,7 @@
         .jssora05r.jssora05rds { background-position: -70px -40px; opacity: .3; pointer-events: none; }
         /* jssor slider thumbnail navigator skin 01 css *//*.jssort01 .p            (normal).jssort01 .p:hover      (normal mouseover).jssort01 .p.pav        (active).jssort01 .p.pdn        (mousedown)*/.jssort01 .p {    position: absolute;    top: 0;    left: 0;    width: 72px;    height: 72px;}.jssort01 .t {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;    border: none;}.jssort01 .w {    position: absolute;    top: 0px;    left: 0px;    width: 100%;    height: 100%;}.jssort01 .c {    position: absolute;    top: 0px;    left: 0px;    width: 68px;    height: 68px;    border: #000 2px solid;    box-sizing: content-box;    background: url('images/t01.png') -800px -800px no-repeat;    _background: none;}.jssort01 .pav .c {    top: 2px;    _top: 0px;    left: 2px;    _left: 0px;    width: 68px;    height: 68px;    border: #000 0px solid;    _border: #fff 2px solid;    background-position: 50% 50%;}.jssort01 .p:hover .c {    top: 0px;    left: 0px;    width: 70px;    height: 70px;    border: #fff 1px solid;    background-position: 50% 50%;}.jssort01 .p.pdn .c {    background-position: 50% 50%;    width: 68px;    height: 68px;    border: #000 2px solid;}* html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {    /* ie quirks mode adjust */    width /**/: 72px;    height /**/: 72px;}
     </style>
+
     <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; visibility: hidden; background-color: #fff;">
         
 		<!-- Loading Screen -->
@@ -131,7 +138,7 @@
             <div style="position:absolute;display:block;background:url('images/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
 		
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden;">
 		
             <?php 
 			// Adição das imagens no carousel
@@ -140,7 +147,6 @@
 								if ($imagem->idMarker == $thismarker->id) {
 										echo "<div data-p='44.50' style='display: none;'>";
 										echo "<img data-u='image' src='$imagem->local' />";
-										echo "<img data-u='thumb' class='thumb' src='$imagem->local' />";
 										echo "</div>";
 									}
 								}
@@ -148,39 +154,45 @@
 			?>
 			
         </div>
-		
-        <!-- Thumbnail Navigator -->
-        <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:300px;height:100px;" data-autocenter="1">
-		
-            <!-- Thumbnail Item Skin Begin -->
-            <div data-u="slides" style="cursor: default;">
-                <div data-u="prototype" class="p">
-                    <div class="w">
-                        <div data-u="thumbnailtemplate" class="t"></div>
-                    </div>
-                    <div class="c"></div>
-                </div>
-            </div>
-            <!-- Thumbnail Item Skin End -->
-        </div>
         <!-- Arrow Navigator -->
-        <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
-        <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+        <span data-u="arrowleft" class="jssora05l" style="top:208px;left:8px;width:40px;height:40px;"></span>
+        <span data-u="arrowright" class="jssora05r" style="top:208px;right:8px;width:40px;height:40px;"></span>
     </div>
+	
    
    <!-- #endregion Jssor Slider End  <div style="float:right; border: 1px solid #83d3c9;"> Adicionar imagem </div>-->
 	
-	 <!-- <form action="view/Imagem/Upload.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
-	</form> -->
-
-
+<script>
+	contador = true;
+function ae (){
+		if (contador){
+		document.getElementById('uploadimage').style.display = "block";
+		document.getElementById('adcimg').style.display = "none";
+		contador = false;
+		} else {
+			document.getElementById('uploadimage').style.display = "none";
+			contador = true;
+		}
+	}
+</script>
+				<div class="hidebutton" style="height:30px; margin-right:20%;float:right;">
+					<?php 
+						echo "<a href='javascript:ae()' type='file' id='adcimg' style='font-size:0.7em;'> Adicionar imagem à $thismarker->nome </a>";
+					?>
+					
+				</div>
+<form id="uploadimage" action="Upload.php" enctype="multipart/form-data" method="post" style="display:none; float:right;">
+<input name="uploadedimage" type="file" style="font-size: 0.5em;">
+<?php
+echo "<input name='idMarker' id='idMarker' type='hidden' value='$thismarker->id'>";
+?>
+<input name="Upload Now" type="submit" value="Upload" class="button special" style="font-size:0.5em;line-height: 2em; position:relative; min-width: 8em;">
+</form>
+	
+	 
 
 		</div>
 	</div>
-	<?php 
-	echo "<a href='index.php?c=Marker&p=cadastrar' class='hidebutton' style='float:right; font-size:0.7em;'> Adicionar imagem à $thismarker->nome </a";
-	?>
+	
 	
 </section>

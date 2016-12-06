@@ -1,7 +1,9 @@
 <section class="wrapper style4 container">
 	<div class="row 150%">
 		<div class="8u 12u(narrower)">
+			
 			<h2 style='border-bottom: 2px solid #83d3c9; '> Adicionar local </h2> <br />
+
 			<form name="cadastro" method="post">
 				<div class="field">
 					<label for="nome">Nome</label>
@@ -77,8 +79,8 @@ function initMap() {
 				</div>	
 		
 				<div class="field">
-					<label for="categoria">Categoria </label>
-					<select name="categoria">
+					<label for="categoria">Categoria </label><br />
+					<select name="categoria" class="select">
 					<option value="1">Acomodação</option>
 					<option value="2">Restaurante</option>
 					<option value="3">Ponto turístico</option>
@@ -91,9 +93,10 @@ function initMap() {
 				</div>
 		
 				<ul class="buttons">
-					<li><input type="submit" value="Cadastrar" /></li>
+					<li><input type="submit" class="button special" value="adicionar" /></li>
 				</ul>
 			</form>
+			
 		</div>
 	</div>
 </section>
