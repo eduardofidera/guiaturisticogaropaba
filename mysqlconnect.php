@@ -8,17 +8,11 @@ $pass="";
 /**********MYSQL Settings****************/
 
 
-$conn=mysql_connect($host,$user,$pass);
+$con = mysqli_connect("$host","$user","$pass","$databasename");
 
-if($conn)
-{
-$db_selected = mysql_select_db($databasename, $conn);
-if (!$db_selected) {
-    die ('Can\'t use foo : ' . mysql_error());
-}
-}
-else
-{
-    die('Not connected : ' . mysql_error());
-}
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 ?>

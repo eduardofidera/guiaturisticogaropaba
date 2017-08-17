@@ -4,7 +4,7 @@
 			$user = 'root';
 			$pass = '';
 			$database = 'guiaturisticogrb';
-			$dsn = "mysql:host=localhost;dbname=$database";
+			$dsn = "mysql:host=localhost;dbname=$database;password=$pass";
 			//configurar as opcoes
 			$options = array(
 				PDO::ATTR_PERSISTENT => true,

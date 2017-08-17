@@ -29,13 +29,23 @@
 var map;
 function initMap() {
 
-	var garopaba = {lat: -28.024537, lng: -48.623806};
+			//var garopaba = {lat: -28.024537, lng: -48.623806};
 
-	map = new google.maps.Map(document.getElementById('map'), {
-		center: garopaba,
+			/*map = new google.maps.Map(document.getElementById('map'), {
+				center: garopaba,
+				zoom: 13
+			}); */
+	map = new google.maps.Map(document.getElementById('map'),{
+		center: new google.maps.LatLng(0,0),
 		zoom: 13
 	});
- 
+
+	if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(function (position) {
+         initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+         map.setCenter(initialLocation);
+     });
+ }
 	// Método marker you are here
 		function getLocation() {
     if (navigator.geolocation) {
@@ -50,11 +60,10 @@ function initMap() {
 		})
 	}
 	getLocation();
-	
-	
+	var MyLatLng = new google.maps.LatLng(-26.856554, -49.1918094);
 	// Criar o marker
 		markercadastro = new google.maps.Marker({
-			position: garopaba,
+			position: MyLatLng,
 			icon: 'images/markercadastro.png',
 			draggable: true,
 			map: map

@@ -14,14 +14,24 @@
 // Criação do mapa
 var map;
 function initMap() {
-var garopaba = {lat: -28.024537, lng: -48.623806};
+//		var garopaba = {lat: -28.024537, lng: -48.623806};
 
-// Criar o mapa em Garopaba
-map = new google.maps.Map(document.getElementById('map'), {
-    center: garopaba,
-    zoom: 13
-});
- 
+		/*
+		map = new google.maps.Map(document.getElementById('map'), {
+			center: garopaba,
+			zoom: 13
+		});
+		*/
+	map = new google.maps.Map(document.getElementById('map'),{
+		center: new google.maps.LatLng(0,0),
+		zoom: 13
+	});
+ if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(function (position) {
+         initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+         map.setCenter(initialLocation);
+     });
+ }
 	// Método marker you are here
 	function getLocation() {
     if (navigator.geolocation) {

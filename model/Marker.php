@@ -54,14 +54,14 @@ class Marker{
 		$db = new Db();
 		$idmarker = filter_input(INPUT_GET, 'idmarker');
 		if ($idmarker){
-		$rs = $db->query ('SELECT * FROM markers WHERE id = '.$idmarker);
-		$markers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
-		return $markers;
-	} else {
-		$rs = $db->query('SELECT * FROM markers');
-		$markers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
-		return $markers;
-	}
+			$rs = $db->query ('SELECT * FROM markers WHERE id = '.$idmarker);
+			$markers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
+			return $markers;
+		} else {
+			$rs = $db->query('SELECT * FROM markers');
+			$markers = $rs->fetchAll(PDO::FETCH_CLASS, 'Marker');
+			return $markers;
+		}
 	}
 	
 }
